@@ -1,1 +1,1 @@
-web: gunicorn Doflamingo.wsgi
+web: gunicorn Doflamingo.wsgipip install django-heroku
