@@ -1,6 +1,6 @@
 asgiref
-certifi==2021.10.8
+certifi
 Django
 django-heroku==0.3.1
-gunicorn==20.1.0
-whitenoise==5.3.0
+gunicorn
+whitenoise
