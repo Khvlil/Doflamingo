@@ -1,6 +1,0 @@
-asgiref
-certifi
-Django
-django-heroku==0.3.1
-gunicorn
-whitenoise
