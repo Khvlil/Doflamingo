@@ -1,0 +1,722 @@
+{% extends "blog/Base/About.html" %}
+{% load static %}
+{% block title %}
+    Djangp
+{% endblock %}
+
+
+
+<!--Cover Start-->
+{% block cover %}
+{% include 'blog/Loader/Loader.html' %}
+<link rel="stylesheet" href="{% static 'blog/css/about/django.css' %}" xmlns="http://www.w3.org/1999/html"/>
+
+<script type="text/javascript">
+        document.addEventListener("mousemove", parallax);
+        function parallax(e){
+          document.querySelectorAll(".btn-django").forEach(function(move){
+            var moving_value = move.getAttribute("data-value");
+            var x = (e.clientX * moving_value)/100;
+            var y = (e.clientY * moving_value)/300;
+
+        move.style.transform = "translateX(" + x + "px) translateY(" + y + "px)";
+
+    });
+    }
+</script>
+<section class="banner django">
+    <div class="container">
+        <div id="scene">
+            <div class="layer"><img src="../../../static/blog/about-cover/Django/Background.png"/></div>
+            <div class="layer none" data-depth="0.3"><img src="../../../static/blog/about-cover/Django/Django.png"/></div>
+            <div class="layer" data-depth-y="0"><img src="../../../static/blog/about-cover/Django/Fog-L.png"/></div>
+            <div class="layer"><img src="../../../static/blog/about-cover/Django/The-way.png"/></div>
+            <div class="layer" data-depth="-0.1"><img src="../../../static/blog/about-cover/Django/Shadow-logo.png"/></div>
+            <div class="layer" data-depth="0.1"><img src="../../../static/blog/about-cover/Django/Horse.png"/></div>
+            <div class="layer" data-depth="-0.5"><img src="../../../static/blog/about-cover/Django/Birds.png"/></div>
+            <div class="layer" data-depth-y="0.2"><img src="../../../static/blog/about-cover/Django/Right-fog.png"/></div>
+            <div class="layer" data-depth-y="0.1"><img src="../../../static/blog/about-cover/Django/Tree.png"/></div>
+            <div class="layer" data-depth-y="0"><img src="../../../static/blog/about-cover/Django/More-fog.png"/></div>
+            <div class="layer" data-depth-y="0"><img src="../../../static/blog/about-cover/Django/Buttom-Fog.png"/></div>
+            <div class="layer"><img src="../../../static/blog/about-cover/Django/Front-way.png"></div>
+            <div class="layer" data-depth="-0.2"><img src="../../../static/blog/about-cover/Django/Sparks.png"></div>
+        </div>
+    </div>
+
+    <img class="banner-logo" data-aos="3" src="../../../static/blog/about-cover/Django/GIF-Django/Django-logo-resp.png"/>
+    <a href="#container"  class="scroll-down" onclick="TestsFunction()"></a>
+
+        <div class="btn-django" data-value="4">
+            <a href="#article" onclick="TestsFunction()"><span>Explore</span></a>
+        </div>
+</section>
+{% endblock %}
+<!--Cover End-->
+
+
+
+{% block article %}
+<section class="article article-django" id="article" >
+    <div class="django-container" id="container" style="display: none">
+
+    <h1 data-aos="flip-down">the magic of <span>Django</span> web framework</h1>
+        <img class="cover" src="../../../static/blog/about-cover/Django/GIF-Django/header-django.gif"/>
+        <h3>What is <span>Django</span></h3>
+    <p>
+       Django is a Python-based web
+        framework which allows you to quickly create web
+        application without all of the installation or dependency problems
+        that you normally will find with other frameworks.
+        it was designed to make common web development tasks fast and easy.
+        and it can be also used to build complex web applications.
+    </p>
+
+        <h3>Why You Should Learn <span>Django</span> ?</h3>
+        <img class="gif" src="../../../static/blog/about-cover/Django/GIF-Django/Social biography.gif"/>
+        <div class="row">
+            <div class="left">
+                <img id="first" src="../../../static/blog/about-cover/Django/GIF-Django/Django-lib.png"/>
+            </div>
+            <div class="right">
+            <p>
+          - First of all, it’s written in Python, one of the most readable and
+            beginner-friendly programming languages out there.<br>
+            also is quick you can  develop fully fleshed web
+            applications in a short period of time.<br>
+            And we are not forgetting that he have thousands of
+            additional packages available.<br>
+             is a portable framework and you can run
+                its code on any platform including PC, Mac, Windows, Linux, etc.
+                and with almost 2k+ contributors and many more are joining every day. It is
+                supported by the huge community of developers and the code is always
+                updated by the developers who use it.
+
+            </p>
+            </div>
+    </div>
+        <h3><span>-</span> Installation of <span>Django</span></h3>
+
+    <p>
+        Check Whether You Have Installed Python 3 Or Not. If Not,
+        Then Download Python 3 From <a href=' https://www.python.org/downloads/ '>Here</a>
+    </p>
+    <p>
+        Installation pip and the set the virtual env<br>
+        Open command prompt and enter following command
+    </p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+python -m pip install -U pip
+    </code>
+    </deckgo-highlight-code>
+
+     <p>
+         Create a new directory for your project to live in
+     </p>
+
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+mkdir Doflamingo
+    </code>
+    </deckgo-highlight-code>
+
+      <p>
+          Install virtual environment
+      </p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+pip install virtualenv
+    </code>
+    </deckgo-highlight-code>
+
+        <h3><span>- </span>Create a Virtual environment</h3>
+        <p>
+            first create a virtual environment
+        </p>
+
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+python -m venv Virtual
+    </code>
+    </deckgo-highlight-code>
+
+        <p>
+            Change directory to Doflamingo by this command-
+        </p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+cd Virtual
+    </code>
+    </deckgo-highlight-code>
+
+        <p>
+            activate the virtual environment-
+        </p>
+
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+Virtual\Script\activate
+    </code>
+    </deckgo-highlight-code>
+
+        <h3>Install <span>Django</span>:</h3>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+pip install django
+    </code>
+    </deckgo-highlight-code>
+
+        <h3>Creating a <span>Project</span>:</h3>
+        <img class="gif" src="../../../static/blog/about-cover/Django/GIF-Django/Project Stages.gif"/>
+        <p>
+            make sure you’re in the Doflamingo directory, and you’ve activated your virtual environment<br>
+            run the this command to create the project:
+        </p>
+
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+django-admin startproject webapp
+    </code>
+    </deckgo-highlight-code>
+
+        <p>here's how the structure should look like</p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+Doflamingo
+│
+├── webapp/
+│   ├── webapp/
+│   │   ├── __init__.py
+│   │   ├── settings.py
+│   │   ├── urls.py
+│   │   └── wsgi.py
+│   │
+│   └── manage.py
+│
+└── Virtual
+    </code>
+    </deckgo-highlight-code>
+
+
+        <p>
+            them you need to specify your project name in INSTALLED_APPS
+            list as follows in <span>settings.py</span>:
+        </p>
+
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+# Application definition
+
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'webapp'
+]
+    </code>
+    </deckgo-highlight-code>
+
+        <p>Now run,</p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+Python manage.py runserver
+    </code>
+    </deckgo-highlight-code>
+
+        <p>in your browser go to <a href="http://127.0.0.1:8000">localhost:8000</a></p>
+        <img class="image" src="../../../static/blog/about-cover/Django/GIF-Django/localhost.png"/>
+
+        <p>and voila , you’ve created a Django site! </p>
+
+        <h3><span>Django</span> Views:</h3>
+        <img class="gif" src="../../../static/blog/about-cover/Django/GIF-Django/Online document.gif"/>
+        <p>
+            simply A view function is a Python function that takes a
+            Web request and returns a Web response. This response can be
+            the HTML contents of a Web page. it's a part of the user interface
+            they usually render the HTML/CSS/Javascript in your Template files into
+            what you see in your browser when you render a web page.
+        </p>
+
+        <h3><span>Django</span> View Example:</h3>
+        <p>
+            To create our first view, we need to modify
+            the views.py file in our events app
+        </p>
+
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+from django.http import HttpResponse
+import datetime
+
+def current_datetime(request):
+    now = datetime.datetime.now()
+    html = "&lt;html>&lt;body>It is now %s.&lt;/body>&lt;/html>" % now
+    return HttpResponse(html)
+    </code>
+    </deckgo-highlight-code>
+
+        <h3><span>-</span> Function Based Views</h3>
+        <p>
+            Function-based views are functions that return an
+            HTTP response after executing the required business
+            logic of a certain view.
+        </p>
+
+        <h3><span>-</span> Simple HTTP Response</h3>
+        <p>
+            This is used in cases where the message is
+            very simple—maybe just short text—important,
+            and the presentation does not matter. The code snippet below
+            demonstrates a function-based view returning a simple HTTP response.
+        </p>
+
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+from django.http import HttpResponse
+
+def simple_http_response(request):
+    # perform business logic
+    return HttpResponse("Hello world from Doflamingo!")
+    </code>
+    </deckgo-highlight-code>
+
+        <h3><span>-</span> Redirect</h3>
+        <p>
+            redirect is used when the logic requires
+            that after execution, the user is redirected to another view.
+        </p>
+
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+from django.http import HttpResponseRedirect
+from django.urls import reverse
+
+def delete_item(request, id):
+    #perform delete operation successfully
+    return HttpResponseRedirect(reverse('url_name_of_homepage'))
+    </code>
+    </deckgo-highlight-code>
+
+        <h3><span>Django</span> Templates:</h3>
+        <img class="gif" src="../../../static/blog/about-cover/Django/GIF-Django/Static website.gif"/>
+        <p>
+            basically written in HTML, CSS, and Javascript in a html file.<br>
+            Django framework efficiently handles and generates
+            dynamically HTML web pages that are visible to the end-user.
+        </p>
+
+        <h3><span>-</span> Configuration :</h3>
+
+        <p>configured the templates in settings.py</p>
+
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+TEMPLATES = [
+    {
+        # Template backend to be used, For example Jinja
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        # Directories for templates
+        'DIRS': [[os.path.join(BASE_DIR, "name_of_the_template_file")]],
+        'APP_DIRS': True,
+
+        # options to configure
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
+    </code>
+    </deckgo-highlight-code>
+
+        <p>create a view:</p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+# import Http Response from django
+from django.shortcuts import render
+
+# create a function
+def flamingo_view(request):
+    # create a dictionary to pass
+    # data to the template
+    context ={
+        "first_name":"Don",
+        "middle_name":"Quixote",
+        "last_name":"Doflamingo"
+    }
+    # return response with template and context
+    return render(request, "Doflamingo.html", context)
+    </code>
+    </deckgo-highlight-code>
+
+        <p>create a template in templates</p>
+
+    <deckgo-highlight-code language="html" style="text-transform: lowercase; ">
+    <code slot="code">
+&lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;head>
+	&lt;meta charset="UTF-8">
+	&lt;meta name="viewport" content="width=device-width, initial-scale=1.0">
+	&lt;meta http-equiv="X-UA-Compatible" content="ie=edge">
+	&lt;title>Homepage&lt;/title>
+&lt;/head>
+&lt;body>
+	&lt;h1>Doflamingo&lt;/h1>
+&lt;p> it's an honor to know you&lt;/p>
+&lt;/body>
+&lt;/html>
+    </code>
+    </deckgo-highlight-code>
+
+
+        <h3><span>Django </span>and his best friend Jinja</h3>
+        <img class="gif" src="../../../static/blog/about-cover/Django/GIF-Django/Responsive.gif"/>
+        <p><span>Variables :</span></p>
+        <p>A variable outputs a value from the context, which is a dict-like object mapping keys to values.<br>
+            Variables are surrounded by &lbrace;{ and }} like this:
+        </p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+My first name is &lbrace;{ first_name }}
+My middle name is &lbrace;{ middle_name }}
+My last name is &lbrace;{ last_name }}.
+    </code>
+    </deckgo-highlight-code>
+
+        <p><span>Tags :</span></p>
+        <p>-Tags provide arbitrary logic in the rendering process.<br>
+            -Tags are surrounded by &lbrace;% and %} like this:
+        </p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+&lbrace;% csrf_token %}
+    </code>
+    </deckgo-highlight-code>
+
+        <p>Most tags accept arguments, for example : </p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+&lbrace;% cycle 'odd' 'even' %}
+    </code>
+    </deckgo-highlight-code>
+
+        <p>Some tags require beginning and ending tags:
+        </p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+&lbrace;% if user.is_authenticated %}
+    Hello, &lbrace;{ user.username }}.
+&lbrace;% endif %}
+    </code>
+    </deckgo-highlight-code>
+
+        <p><span>Comments :</span></p>
+        <p>Template ignores everything between &lbrace;% comment %} and &lbrace;% end comment %}.
+            An optional note may be inserted in the first tag.</p>
+        <p><span>Syntax :</span></p>
+
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+&lbrace;% comment 'comment_name' %}
+&lbrace;% endcomment %}
+    </code>
+    </deckgo-highlight-code>
+
+        <p><span>Example:</span></p>
+
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+&lbrace;% comment "Optional note" %}
+    Commented out text with &lbrace;{ create_date|date:"c" }}
+&lbrace;% endcomment %}
+    </code>
+    </deckgo-highlight-code>
+
+        <p>To find out more, we recommend that you visit
+            <a href ='https://docs.djangoproject.com/en/4.0/topics/templates/'>
+                Django Templates Tags
+            </a>
+        </p>
+
+        <h3><span>Django</span> Models:</h3>
+        <p>A model is the single, definitive source of information
+            about your data. It contains the essential fields and
+            behaviors of the data you’re storing. Generally, each
+            model maps to a single database table, is complex and
+            involves a lot of different queries for creating, deleting,
+            updating or any other stuff related to database. </p>
+
+        <h3>Using <span>Django</span> Models</h3>
+        <p>Now we gonna create models in app/models.py<br>
+            Creating a Model
+        </p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+# import the standard Django Model
+# from built-in library
+from django.db import models
+
+# declare a new model with a name "DonModel"
+class DonModel(models.Model):
+        # fields of the model
+        title = models.CharField(max_length = 350)
+        description = models.TextField()
+        last_modified = models.DateTimeField(auto_now_add = True)
+        img = models.ImageField(upload_to = "images/")
+
+        # renames the instances of the model
+        # with their title name
+        def __str__(self):
+            return self.title
+    </code>
+    </deckgo-highlight-code>
+
+        <p>Each field takes a certain set of field-specific
+            arguments For example, CharField require a max_length
+            argument which specifies the size of the VARCHAR database
+            field used to store the data.<br>
+
+            Here are some <a href='https://docs.djangoproject.com/en/4.0/ref/models/fields/#model-field-types'>Fields</a> you must know it
+        </p>
+
+        <p>
+            Now we’ve created the model, it’s time to add it to the database. Make sure the virtual environment is running</p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+python manage.py makemigrations
+    </code>
+    </deckgo-highlight-code>
+
+        <p>
+            Hit enter and then run the command:
+        </p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+python manage.py migrate
+    </code>
+    </deckgo-highlight-code>
+
+        <h3>Validation on Fields in a Model</h3>
+        <p>
+            Every field comes in with built-in validations from Django validators. For example, IntegerField comes with built-in validation that it can only store integer values and that too in a particular range.
+        </p>
+
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+from django.db import models
+from django.db.models import Model
+# Create your models here.
+
+class DonModel(Model):
+    doflamingo_field = models.IntegerField()
+
+    def __str__(self):
+        return self.doflamingo_field
+    </code>
+    </deckgo-highlight-code>
+
+        <p>
+            After that makemigrations and migrate
+            	&nbsp;and here are some of <a href='https://docs.djangoproject.com/en/4.0/topics/db/models/#field-options'>Fields option</a><br>
+            	&nbsp;<a href='https://docs.djangoproject.com/en/4.0/topics/db/models/#relationships'>Relationships Fields</a><br>
+            	&nbsp;<a href='https://docs.djangoproject.com/en/4.0/ref/models/fields/#model-field-types'>model data types and fields list</a>
+        </p>
+
+        <h3><span>Django</span> Forms:</h3>
+        <p>
+            Django provides a range of tools and libraries to
+            help you build forms to accept input from site visitors,
+            and then process and respond to the input.
+            For example, Registering a user by taking input
+            as his name, email, password, etc.
+        </p>
+        <p>
+            <span>Note:</span>Django Fields work like Django Model Fields
+        </p>
+
+        <p><span>Syntax :</span></p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+from django import forms
+
+class DonsForm(forms.Form):
+    # each field would be mapped as an input field in HTML
+    field_name = forms.Field(**options)
+    </code>
+    </deckgo-highlight-code>
+        <p><span>Example:</span></p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+from django import forms
+
+# creating a form
+class DonForm(forms.Form):
+    title = forms.CharField()
+    description = forms.CharField()
+    </code>
+    </deckgo-highlight-code>
+
+        <h3><span>-</span> Render<span> Django </span>Forms</h3>
+        <p>
+            <span>-</span> there is 3 in-built methods that can be used to render Django form fields.<br>
+
+            <span>-</span> {{ form.as_table }} will render them as table cells wrapped in &lt;tr> tags.<br>
+            <span>-</span> {{ form.as_p }} will render them wrapped in &lt;p> tags.<br>
+            <span>-</span> {{ form.as_ul }} will render them wrapped in &lt;li> tags.<br>
+
+            <span>-</span> All you need to do to get your form into a template is to place the form
+                    instance into the template context.
+        </p>
+
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+rom django.shortcuts import render
+from .forms import InputForm
+
+# Create your views here.
+def home_view(request):
+    context ={}
+    context['form']= InputForm()
+    return render(request, "home.html", context)
+    </code>
+    </deckgo-highlight-code>
+
+        <p>
+            So if your form is called form in the context, {{ form }} will render
+            its &lt;label> and &lt;input> elements appropriately.
+        </p>
+        <p>
+            Now let’s edit templates
+        </p>
+
+    <deckgo-highlight-code language="html" style="text-transform: lowercase; ">
+    <code slot="code">
+&lt;form action = "" method = "post">
+    {% csrf_token %}
+    {{ form }}
+    &lt;input type="submit" value=Submit">
+&lt;/form>
+    </code>
+    </deckgo-highlight-code>
+
+        <h3><span>-</span> Admin interface:</h3>
+
+        <p>
+            One of the most powerful parts of Django is the automatic
+            admin interface ,he provides a ready-to-use user
+            interface for administrative activities. We all
+            know how an admin interface is important for a web
+            project. Django automatically generates admin UI based
+            on your project models.<br>
+        </p>
+        <p>
+            Activating and Using the Admin Interface:
+            The admin app(django.contrib.admin) is enabled by
+            default and already added into the INSTALLED_APPS list
+            present in the settings.py file.<br>
+
+            To access this admin interface on browser write
+            ‘/admin/’ at ‘localhost:8000/admin/’<br>
+
+            to login to the admin interface you need to create a superuser
+        </p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+python manage.py createsuperuser
+    </code>
+    </deckgo-highlight-code>
+
+        <p>
+            <span>Warnning :</span> don't write a password similar to the email
+        </p>
+        <p>
+            Enter username and password, then hit login.<br>
+            and Voila my dear friend , Here's the Django Admin Dashboard where one can add, delete and update data belonging to any registered model.
+        </p>
+
+        <h3><span>+ </span>Source</h3>
+        <p><span>- </span>Django documentations :<a href="https://docs.djangoproject.com/en/4.0/"><span>Django Docs</span></a></p>
+         <p><span>- </span>Django projects :<a href="https://www.geeksforgeeks.org/"><span>Geeksforgeeks</span></a></p>
+        <p><span>- </span>Django receipts :<a href="https://github.com/realpython/django-receipts/blob/master/README.rst"><span>Github</span></a></p>
+
+
+        <h3><span>+ </span>Projects</h3>
+         <p><span>- </span><a href="https://www.geeksforgeeks.org/python-django-google-authentication-and-fetching-mails-from-scratch/">Google authentication and Fetching mails from scratch</a></p>
+         <p><span>- </span><a href="https://www.geeksforgeeks.org/weather-app-using-django-python/">Weather app using Django</a></p>
+         <p><span>- </span><a href="https://www.geeksforgeeks.org/python-django-news-app/">Django News App</a></p>
+
+        <h3><span>+ </span>Conclusion</h3>
+        <p>Congratulations, you’ve reached the end of the article!
+            We’ve covered a lot, so make sure you start building.<br>
+            The more you build the easier it will become and the less you’ll have to refer back
+            to this article or the documentation. You’ll be building sophisticated
+            web applications in no time.</p>
+
+
+
+        </div>
+</section>
+{% endblock %}
+
+
+<!--Footer Start-->
+{% block footer %}
+<footer>
+          <div class="footer" id="footer"  style="display: none">
+                <div class="footer-content">
+                <h3>Doflamingo</h3>
+                <p>Get to know us her on social media if you have any questions or just want to visit, anyway</p>
+                    <ul class="socials">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                    </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>copyright &copy;2021 Doflamingo. designed by <span>Me</span></p>
+            </div>
+          </div>
+    </footer>
+{% endblock %}
+<!--Footer End-->

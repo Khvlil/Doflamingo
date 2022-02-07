@@ -1,0 +1,507 @@
+{% extends "blog/Base/About.html" %}
+{% load static %}
+{% block title %}
+    Beautifullsoup
+{% endblock %}
+
+
+<!--Cover Start-->
+{% block cover %}
+{% include 'blog/Loader/Loader.html' %}
+<link rel="stylesheet" href="{% static 'blog/css/about/beautifullsoup.css' %}" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html"/>
+<section class="banner beautifullsoup">
+    <div class="container">
+        <div id="scene">
+            <div class="layer"><img src="../../../static/blog/about-cover/Beautifullsoup/Background.png"/></div>
+            <div class="layer" data-depth-x="0.25"><img src="../../../static/blog/about-cover/Beautifullsoup/Moon.png"/></div>
+            <div class="layer" data-depth-x="-0.02"><img src="../../../static/blog/about-cover/Beautifullsoup/Building.png"/></div>
+            <div class="layer" data-depth-x="0.08"><img src="../../../static/blog/about-cover/Beautifullsoup/Building-2.png"/></div>
+            <div class="layer" data-depth-y="0.03"><img src="../../../static/blog/about-cover/Beautifullsoup/Trees.png"/></div>
+            <div class="layer none" data-depth="-0.40"><img src="../../../static/blog/about-cover/Beautifullsoup/Beautifulsoup.png"/></div>
+            <div class="layer"><img src="../../../static/blog/about-cover/Beautifullsoup/Stones.png"/></div>
+            <div class="layer" data-depth-x="-0.25"><img src="../../../static/blog/about-cover/Beautifullsoup/Samurai.png"/></div>
+            <div class="layer none" data-depth="0.35"><img src="../../../static/blog/about-cover/Beautifullsoup/Falling-trees.png"/></div>
+            <div class="layer"><img src="../../../static/blog/about-cover/Beautifullsoup/Fog.png"/></div>
+
+             <!-- in respinsive -->
+             <div class="layer res-disp" data-depth-y="0.35"><img src="../../../static/blog/about-cover/Beautifullsoup/Falling-trees.png"/></div>
+
+        </div>
+
+    </div>
+    <img class="banner-logo" src="../../../static/blog/about-cover/Beautifullsoup/GIF-Beautifullsoup/Beautifulsoup-logo-res.png"/>
+    <a href="#container"  class="scroll-down" onclick="TestsFunction()"></a>
+        <div class="btn-beautifullsoup" data-value="9" data-aos="fade-in">
+            <a href="#article" onclick="TestsFunction()"><span>Explore</span></a>
+        </div>
+</section>
+{% endblock %}
+<!--Cover End-->
+
+<!--Article Start-->
+{% block article %}
+<section class="article article-beautifullsoup" id="article">
+        <div class="beautifullsoup-container" id="container" style="display: none">
+
+    <h1 data-aos="flip-down">start expanding your talent in <span>Webscraping</span></h1>
+            <img class="cover" src="../../../static/blog/about-cover/Beautifullsoup/GIF-Beautifullsoup/header-beautifullsoup.gif"/>
+            <h3>what is <span>BeautifulSoup</span></h3>
+        <p>
+        <span>BeautifulSoup</span> is a Python library for parsing HTML and XML documents. It is often used for web scraping. BeautifulSoup transforms a complex HTML document into a complex tree of Python objects, such as tag, navigable string, or comment.
+        </p>
+            <img class="logo" src="../../../static/blog/about-cover/Beautifullsoup/GIF-Beautifullsoup/Beautifulsoup.png"/>
+
+
+            <h3>What is web scraping, and why do I need it?</h3>
+            <img class="gif" src="../../../static/blog/about-cover/Beautifullsoup/GIF-Beautifullsoup/Construction.gif"/>
+            <p>
+        The simple answer is this: Not every website has an API to fetch content. You might want to get recipes from your favorite cooking website or photos from a travel blog. Without an API, extracting the HTML, or scraping, might be the only way to get that content. I'm going to show you how to do this in Python.
+            </p>
+        <p><span>Note :</span><br>
+        Not all websites take kindly to scraping, and some may prohibit it explicitly. Check with the website owners if they're okay with scraping.
+        </p>
+
+            <h3><span>Question :</span>How do I <span>scrape</span> a website in <span>Python</span> ?</h3>
+        <p>
+        For web scraping to work in Python, we're going to perform three basic steps:<br>
+
+        <span>- </span> Extract the HTML content using the requests library.<br>
+        <span>- </span> Analyze the HTML structure and identify the tags which have our content.<br>
+        <span>- </span> Extract the tags using Beautiful Soup and put the data in a Python list.
+        </p>
+
+
+            <h3><span>- </span>Data for Research</h3>
+        <p>
+            <span>Smart analyst</span><br>
+            uses web scrapper instead of manually collecting and cleaning
+            data from the websites.
+        </p>
+
+        <p>
+        <span>Products prices & popularity comparison</span><br>
+        Currently there are couple of services which use web
+            scrappers to collect data from numerous online
+            sites and use it to compare products popularity and prices.
+        </p>
+
+        <p>
+        <span>SEO Monitoring</span><br>
+        There are numerous SEO tools such as Ahrefs, Seobility, SEMrush, etc., which are used for competitive analysis and for pulling data from your client’s websites.
+        </p>
+
+        <p>
+            <span>Search engines</span><br>
+        There are some big IT companies whose business solely depends on web scraping.
+        </p>
+
+        <p>
+            <span>Sales and Marketing</span>
+        The data gathered through web scraping can be used by marketers to analyze different niches and competitors or by the sales specialist for selling content marketing or social media promotion services.
+        </p>
+
+
+            <h3> Why <span>Python</span> for Web Scraping? </h3>
+                <img class="gif" src="../../../static/blog/about-cover/Beautifullsoup/GIF-Beautifullsoup/Thinking%20face.gif"/>
+            <p>
+        Python is one of the most popular
+            languages for web scraping as it can handle most
+            of the web crawling related tasks very easily.<br>
+
+        Below are some of the points on why to
+            choose python for web scraping:<br>
+
+        <span>Ease of Use :</span><br>
+        As most of the developers agree that python is
+            very easy to code. We don’t have to use any curly
+            braces “{ }” or semi-colons “;” anywhere, which makes
+            it more readable and easy-to-use while developing web scrapers.<br>
+
+        <span>Huge Library Support:</span><br>
+        Python provides huge set of libraries for different
+            requirements, so it is appropriate for web scraping as
+            well as for data visualization, machine learning, etc.<br>
+
+        <span>Easily Explicable Syntax :</span><br>
+        Python is a very readable programming language as
+            python syntax are easy to understand. <br>
+
+
+        <span>Dynamically-typed language :</span><br>
+        Python is a dynamically-typed language, which means
+            the data assigned to a variable tells, what type
+            of variable it is. It saves lot of time and makes work faster.<br>
+
+            <h3>Installing <span>virtual environment</span> :</h3>
+        <p>
+        A virtual environment allows us to create an isolated working
+            copy of python for a specific project without affecting
+            the outside setup.<br>
+
+        Best way to install any python package machine
+            is using pip, however, if pip is not installed already
+            (you can check it using – “pip –version” in your command or shell prompt)
+            , you can install by giving below command <br>
+
+        <span>Windows environment :</span><br>
+        To install pip in windows, do the following −
+
+        Download the <a href="https://bootstrap.pypa.
+            io/get-pip.py">get-pip.py</a> or from the github to your computer.<br>
+
+        Open the command prompt and navigate to the folder containing get-pip.py file.<br>
+
+            Run the following command :</p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+python get-pip.py
+    </code>
+    </deckgo-highlight-code>
+
+        <p>
+        That’s it, pip is now installed in your windows machine.<br>
+
+        You can verify your pip installed by running below command
+        </p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+python get-pip.py
+    </code>
+    </deckgo-highlight-code>
+
+            <h3>Creating a <span>virtual environment</span> (non-compulsory):</h3>
+                 <img class="gif" src="../../../static/blog/about-cover/Beautifullsoup/GIF-Beautifullsoup/Create.gif"/>
+        <p>
+        Run the below command in your command prompt
+        </p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+pip install virtualenv
+    </code>
+    </deckgo-highlight-code>
+        <p>
+        Below command will create a
+            virtual environment “Virtual” in your current directory
+        </p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+python -m venv Virtual
+    </code>
+    </deckgo-highlight-code>
+
+        <p>
+        To activate your virtual environment, run the following command
+        </p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+Virtual\Scripts\activate
+    </code>
+    </deckgo-highlight-code>
+
+
+            <h3>Installing <span>BeautifulSoup</span></h3>
+        <p>
+        We use the pip3 command to install the necessary modules.
+        </p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+pip install lxml
+    </code>
+    </deckgo-highlight-code>
+
+        <p>
+        We need to install the lxml module, which is
+            used by <span>BeautifulSoup.</span>
+        </p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+pip install bs4
+     </code>
+    </deckgo-highlight-code>
+
+        <p>
+        BeautifulSoup is installed with the above command.
+        </p>
+
+
+            <h3>Running <span>Beautiful</span> Soup</h3>
+            <img class="gif" src="../../../static/blog/about-cover/Beautifullsoup/GIF-Beautifullsoup/Chef.gif"/>
+            <p>
+        It is time to test our Beautiful Soup package in one of the html pages (taking web page , you can choose any web page you want) and extract some information from it.<br>
+
+        In the below code, we are trying to extract the title and the content from the webpage
+        </p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+from bs4 import BeautifulSoup
+# import request too
+import requests
+#make the url
+url = "the-website"
+#make a request
+request = requests.get(url)
+soup = BeautifulSoup(request.text, "html.parser")
+#print the title
+print(soup.title)
+# or print the content with
+print(soup.content)
+    </code>
+    </deckgo-highlight-code>
+
+
+
+            <h3>Parsing the HTML</h3>
+                <img class="gif" src="../../../static/blog/about-cover/Beautifullsoup/GIF-Beautifullsoup/Ebook.gif"/>
+        <p>
+        After getting the HTML of the page let’s see how
+            to parse this raw HTML code into some useful information.
+            First of all, we will create a BeautifulSoup object by
+            specifying the parser we want to use.<br>
+
+        <span>Note:</span> BeautifulSoup library is built on the top of the HTML parsing libraries like html5lib, lxml, html.parser, etc. So BeautifulSoup object and specify the parser library can be created at the same time.
+        </p>
+
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+import requests
+from bs4 import BeautifulSoup
+# Making a GET request
+request = requests.get('URL_WEB_SITE_Example')
+# check status code
+# success code - 200
+print(request)
+# Parsing the HTML
+soup = BeautifulSoup(request.content, 'html.parser')
+print(soup.prettify())
+    </code>
+    </deckgo-highlight-code>
+
+        <p><span>Example II</span></p>
+
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase;">
+    <code slot="code">
+import requests
+from bs4 import BeautifulSoup
+# Making a GET request
+request = requests.get('URL_WEB_SITE_Example')
+# Parsing the HTML
+soup = BeautifulSoup(request .content, 'html.parser')
+# Getting the title tag
+print(soup.title)
+# Getting the name of the tag
+print(soup.title.name)
+# Getting the name of parent tag
+print(soup.title.parent.name)
+# use the child attribute to get
+# the name of the child tag
+    </code>
+    </deckgo-highlight-code>
+
+
+            <h3><spin>- </spin>Finding Elements</h3>
+        <p>
+        Now, we would like to extract some useful data from the HTML content. The soup object
+            contains all the data in the nested structure which could be programmatically
+            extracted. The website we want to scrape contains a lot of text so now let’s scrape all those content.
+        </p>
+            <p><span>- Finding Elements by Class</span></p>
+        <p>
+            In the above image we can see that all the content of the page is
+            under the div with class entry-content. We will store all the result
+            found under this class.
+        </p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+import requests
+from bs4 import BeautifulSoup
+# Making a GET request
+request = requests.get('URL_WEB_SITE_Example')
+# check status code for response received
+# success code - 200
+print(request)
+# Parsing the HTML
+soup = BeautifulSoup(request .content, 'html.parser')
+div = soup.find('div', class_='entry-content')
+print(div)
+    </code>
+    </deckgo-highlight-code>
+
+        <p>
+        So if we want to find all the p tags present in this class.
+            We can use the find_all class of the BeautifulSoup.
+        </p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+import requests
+from bs4 import BeautifulSoup
+
+# Making a GET request
+request = requests.get('URL_WEB_SITE_Example')
+
+# Parsing the HTML
+soup = BeautifulSoup(request.content, 'html.parser')
+div = soup.find('div', class_='entry-content')
+
+paragraph = s.find_all('p')
+#print the paragraph
+print(paragraph)
+    </code>
+    </deckgo-highlight-code>
+
+
+        <p><span>Finding Elements by ID</span><br>
+        let’s see how to find elements by id.
+        </p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+import requests
+from bs4 import BeautifulSoup
+
+# Making a GET request
+request = requests.get('URL_WEB_SITE_Example')
+
+# Parsing the HTML
+soup = BeautifulSoup(request.content, 'html.parser')
+
+# finding element by id
+div = soup.find('div', id= 'main')
+
+#print the div
+print(div)
+    </code>
+    </deckgo-highlight-code>
+           <p>
+                Also can be applied to the &lt;ul> tag
+                our code now is to
+                find all the li under this ul.
+           </p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase;">
+    <code slot="code">
+import requests
+from bs4 import BeautifulSoup
+
+# Making a GET request
+request = requests.get('URL_WEB_SITE_Example')
+
+# Parsing the HTML
+soup = BeautifulSoup(request.content, 'html.parser')
+
+# Finding by id
+div = soup.find('div', id= 'main')
+
+# Getting the ul
+ul = div.find('ul', class_='leftBarList')
+
+# All the li under the above ul
+content = ul.find_all('li')
+
+#print the list content
+print(content)
+    </code>
+    </deckgo-highlight-code>
+
+        <h3><span>-</span> Extracting Text from the tags</h3>
+             <img class="gif" src="../../../static/blog/about-cover/Beautifullsoup/GIF-Beautifullsoup/Data%20extraction.gif"/>
+        <p>
+            In the above examples, you must have seen
+            that while scraping the data the tags also gets
+            scraped but what if we want only the text without any
+            tags. Don’t worry we will discuss the same in this section.
+            We will be using the text property. It only prints the text
+            from the tag. We will be using the above example and will remove
+            all the tags from them.<br>
+            <span>Removing the tags from the content of the page </span>
+        </p>
+
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+import requests
+from bs4 import BeautifulSoup
+
+# Making a GET request
+request = requests.get('URL_WEB_SITE_Example')
+
+# Parsing the HTML
+soup = BeautifulSoup(request.content, 'html.parser')
+
+#find the class
+div = soup.find('div', class_='entry-content')
+
+#find the 'p'
+paragraph = div.find_all('p')
+
+#loop through all the lines
+for line in lines:
+    print(paragraph.text)
+    </code>
+    </deckgo-highlight-code>
+
+
+            <h3><span>+</span>Source :</h3>
+         <p><span>- </span><a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">Crummy</a></p>
+         <p><span>- </span><a href="https://beautiful-soup-4.readthedocs.io/en/latest/">Readthedocs</a></p>
+         <p><span>- </span><a href="https://tedboy.github.io/bs4_doc/">Tedboy</a></p>
+
+
+            <h3><span>+ </span>Exercice</h3>
+         <p><span>- </span><a href="https://www.geeksforgeeks.org/get-all-html-tags-with-beautifulsoup/">Get all HTML tags with BeautifulSoup</a></p>
+         <p><span>- </span><a href=https://www.geeksforgeeks.org/beautifulsoup-scraping-list-from-html/">BeautifulSoup – Scraping List from HTML</a></p>
+         <p><span>- </span><a href=https://www.geeksforgeeks.org/get-a-list-of-all-the-heading-tags-using-beautifulsoup/">Get a list of all the heading tags using BeautifulSoup</a></p>
+
+            <h3><span>+ </span>Projects</h3>
+         <p><span>- </span><a href="https://www.geeksforgeeks.org/how-to-extract-weather-data-from-google-in-python/">Extract Weather Data from Google in Python?</a></p>
+
+        <h3><span>+</span>Conclusion :</h3>
+            <p>The <a href="{% url 'request' %}">request</a> requests library gives you a user-friendly way to fetch static HTML from the Internet using Python.
+                You can then parse the HTML with another package called <span>BeautifulSoup</span>. Both packages are trusted and helpful
+                companions for your web scraping adventures. You’ll find
+                that <span>Beautiful Soup</span> will cater to most of your parsing needs, including navigation and advanced searching.
+            </p>
+
+
+
+    </div>
+
+</section>
+{% endblock %}
+<!--Footer End-->
+
+
+<!--Footer Start-->
+{% block footer %}
+<footer>
+          <div class="footer" id="footer"  style="display: none">
+                <div class="footer-content">
+                <h3>Doflamingo</h3>
+                <p>Get to know us her on social media if you have any questions or just want to visit, anyway</p>
+                    <ul class="socials">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                    </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>copyright &copy;2021 Doflamingo. designed by <span>Me</span></p>
+            </div>
+          </div>
+    </footer>
+{% endblock %}
+<!--Footer End-->

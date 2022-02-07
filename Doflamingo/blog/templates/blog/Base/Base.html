@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <link rel="shortcut icon" href="{%  static 'blog/favicon/Doflamingo.png' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doflamingo</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="{% static 'blog/css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/css/newsletter.css' %}">
+    <script type="text/javascript" src="{% static 'blog/js/base.js' %}"></script>
+
+
+
+
+</head>
+<body>
+
+
+{% include 'blog/Navbar/navbar.html' %}
+
+
+{% block newsletter %}
+
+{% endblock %}
+
+
+<!-- HOME -->
+{% block header %}
+
+{% endblock %}
+<!-- HOME END -->
+
+<!-- LIBRARIES -->
+{%  block libraries  %}
+
+{% endblock %}
+<!-- LIBRARIES END -->
+
+<!-- ABOUT -->
+{% block about %}
+
+{% endblock %}
+<!-- ABOUT END -->
+
+<!-- SERVICE -->
+{% block service %}
+
+{% endblock %}
+<!-- SERVICE END -->
+
+
+<!-- QUOTES -->
+{% block quotes %}
+
+{% endblock %}
+<!-- QUOTES END -->
+
+<!-- featured END -->
+<!-- {% block featured %}
+
+
+{% endblock %} -->
+<!-- featured END -->
+
+
+<!-- CONTACT -->
+{% block contact %}
+
+{% endblock %}
+<!-- CONTACT END -->
+
+<!-- FOOTER -->
+{% block footer %}
+
+{% endblock %}
+<!-- FOOTER END -->
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+<script src="{% static 'blog/js/base.js' %}"></script>
+
+ <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+<script>
+function popupToggle() {
+    const popup = document.getElementById('popup');
+    popup.classList.toggle('active')
+}
+
+
+</script>
+    <!-- Initialize Swiper reviews -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".reviews-swiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 0,
+          depth: 100,
+          modifier: 2,
+          slideShadows: true,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+        loop:true
+      });
+    </script>
+</body>
+</html>

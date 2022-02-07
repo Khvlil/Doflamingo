@@ -1,0 +1,500 @@
+{% extends "blog/Base/About.html" %}
+{% load static %}
+{% block title %}
+    Matplotib
+{% endblock %}
+
+
+
+
+<!--Cover Start-->
+{% block cover %}
+{% include 'blog/Loader/Loader.html' %}
+<link rel="stylesheet" href="{% static 'blog/css/about/matplotib.css' %}">
+<script type="text/javascript">
+        document.addEventListener("mousemove", parallax);
+        function parallax(e){
+          document.querySelectorAll(".btn-matplotib").forEach(function(move){
+            var moving_value = move.getAttribute("data-value");
+            var x = (e.clientX * moving_value)/100;
+            var y = (e.clientY * moving_value)/300;
+
+        move.style.transform = "translateX(" + x + "px) translateY(" + y + "px)";
+
+    });
+    }
+</script>
+<script>
+document.onscroll = function() {
+    if (window.innerHeight + window.scrollY > document.body.clientHeight) {
+        document.getElementById('#matplotib').style.display='none';
+    }
+}
+</script>
+<section class="banner matplotib" id="matplotib">
+    <div class="container">
+        <div id="scene">
+            <div class="layer"><img src="../../../static/blog/about-cover/Matplotib/Sky.png"/></div>
+            <div class="layer none" data-depth-y="1"><img src="../../../static/blog/about-cover/Matplotib/Matplotib.png"/></div>
+            <div class="layer"><img src="../../../static/blog/about-cover/Matplotib/Mountain.png"/></div>
+            <div class="layer" data-depth-x="-0.1"><img src="../../../static/blog/about-cover/Matplotib/Moon.png"/></div>
+            <div class="layer" data-depth-x="0.1"><img src="../../../static/blog/about-cover/Matplotib/Man.png"/></div>
+            <div class="layer" data-depth="0.4"><img src="../../../static/blog/about-cover/Matplotib/Sparks.png"/></div>
+            <div class="layer" data-depth-x="-0.9"><img src="../../../static/blog/about-cover/Matplotib/Naizak.png"/></div>
+        </div>
+    </div>
+
+        <img class="banner-logo" src="../../../static/blog/about-cover/Matplotib/GIF-Mat/matplotib-logo-resp.png" height="350" width="491"/><a href="#container" class="scroll-down" onclick="TestsFunction()"></a>
+        <div class="btn-matplotib" data-value="4">
+            <a href="#article" onclick="TestsFunction()"><span>Explore</span></a>
+        </div>
+</section>
+{% endblock %}
+<!--Cover End-->
+
+<!--Article Start-->
+{% block article %}
+<section class="article article-matplotib" id="article">
+    <div class="matplotib-container" id="container" style="display: none">
+
+    <h1 data-aos="flip-down">Be the picasso of your time by using a <span>matplotlib</span></h1>
+
+        <img class="cover" src="../../../static/blog/about-cover/Matplotib/GIF-Mat/Cover-matplotib.gif" height="500" width="1024"/>
+        <h3>What is <span>Matplotlib</span></h3>
+        <div class="row">
+            <div class="left">
+                <img src="../../../static/blog/about-cover/Matplotib/GIF-Mat/matplotib-logo.png"/>
+            </div>
+          <div class="right">
+            <p>
+                To make necessary statistical inferences, it becomes necessary to visualize
+                your data and Matplotlib is one such solution for the Python users. It is a
+                very powerful plotting library useful for those working with Python and NumPy.
+                The most used module of Matplotib is Pyplot which provides an interface like MATLAB
+                but instead, it uses Python and it is open source.
+            </p>
+           </div>
+        </div>
+    <h3>Why Can <span>Matplotlib</span> Be Confusing?</h3>
+        <img class="gif" src="../../../static/blog/about-cover/Matplotib/GIF-Mat/Man thinking.gif"/>
+        <p>
+        Learning matplotlib can be a frustrating process
+        at times. The problem is not that matplotlib’s documentation
+        is lacking: the documentation is actually extensive. But the following
+        issues can cause some challenges: <br>
+
+        The library itself is huge, at something like 70,000 total lines of code.
+        Matplotlib is home to several different interfaces (ways of constructing a figure)
+        and capable of interacting with a handful of different backends. (Backends deal with the
+        process of how charts are actually rendered, not just structured internally.)
+        While it is comprehensive, some of matplotlib’s own public documentation is seriously out-of-date.
+        The library is still evolving, and many older examples floating around online may take 70% fewer lines
+        of code in their modern version.
+        So, before we get to any glitzy examples, it’s useful to grasp the core concepts of matplotlib’s design.<br>
+
+        Figure: It is a whole figure which may contain one or more than one axes (plots).
+            You can think of a Figure as a canvas which contains plots.<br>
+        Axes: It is what we generally think of as a plot. A Figure can contain many Axes. It contains
+        two or three (in the case of 3D) Axis objects. Each Axes has a title, an x-label and a y-label.<br>
+        Axis: They are the number line like objects and take care of generating the graph limits.<br>
+        Artist: Everything which one can see on the figure is an artist like Text objects, Line2D objects, collection objects.
+        Most Artists are tied to Axes.
+    </p>
+
+
+        <h3><span>-</span> Important types of plots in <span>Matplotlib</span></h3>
+        <img class="gif" src="../../../static/blog/about-cover/Matplotib/GIF-Mat/Curious.gif"/>
+        <p>
+            Now that you know what is Matplotlib and how you can install it in your system,
+            let’s discuss different kinds of plots that you can draw to analyze your data or
+            to present your findings.
+        </p>
+
+        <h3><span>-</span> install <span>matplotib</span></h3>
+        <p>
+            Matplotlib and its dependency packages are available in the form
+            of wheel packages on the standard Python package repositories and can
+            be installed on Windows, Linux as well as MacOS systems using the pip package manager.
+        </p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+pip install matplotlib
+    </code>
+    </deckgo-highlight-code>
+
+        <p>
+            If you are using Python 2.7 on a Mac, execute the following command
+        </p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+xcode-select –install
+    </code>
+    </deckgo-highlight-code>
+
+        <p>
+            Most of the time we have to work with the Pyplot as an interface of Matplotlib. So, we import Pyplot like this:
+        </p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+import matplotlib.pyplot
+    </code>
+    </deckgo-highlight-code>
+
+
+        <p>To make things easier, we can import it like this:</p>
+
+
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+import matplotlib.pyplot as plt
+    </code>
+    </deckgo-highlight-code>
+
+
+        <h3><span>Line</span> Plot</h3>
+        <p>Line Chart is used to represent a relationship between
+            two data X and Y on a different axis<br>
+
+            The <span>plot()</span> function in the Matplotlib library’s
+            Pyplot module is used to create a 2D hexagonal
+            plot of the coordinates x and y. <span>plot()</span> will
+            take various arguments like:<br>
+            syntax:
+        </p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+plot(x, y, scalex, scaley, data, **kwargs).
+    </code>
+    </deckgo-highlight-code>
+
+        <p><span>x, y:</span> the coordinates of the horizontal
+            and vertical axis where x values are optional
+            and its default value is range(len(y)).<br>
+
+            <span>scalex, scaley:</span> parameters are used to autoscale
+            the x-axis or y-axis, and its default value is true.<br>
+
+            <span>**kwargs</span> to specify the property like line
+            label, linewidth, marker, color, etc.<br>
+        </p>
+
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+#this line will create array of numbers between 1 to 10 of length 100
+#np.linspace(satrt,stop,num)
+x1 = np.linspace(0, 10, 100)  #line plot
+plt.plot(x1, np.sin(x1), '-',color='orange')
+plt.plot(x1, np.cos(x1), '--',color='b')
+#give the name of the x and y  axis
+plt.xlabel('x label')
+plt.ylabel('y label')
+#also give the title of the plot
+plt.title("Title")
+plt.show()
+    </code>
+    </deckgo-highlight-code>
+
+        <img class="image" src="../../../static/blog/about-cover/Matplotib/GIF-Mat/Liner.png"/>
+
+
+        <!-- Histogram -->
+        <h3><span>Histogram</span> Plot</h3>
+        <p>
+            A <span>hist()</span> is basically used to represent data in the
+            form of some groups. It is a type of bar plot where the
+            X-axis represents the bin ranges while the Y-axis gives
+            information about frequency.<br>
+
+            <span>x:</span> x-coordinate or sequence of the array<br>
+
+            <span>bins:</span> integer value for the number of bins wanted in the graph<br>
+
+            <span>range:</span> the lower and upper range of bins<br>
+
+            <span>density:</span> optional parameter that contains boolean values<br>
+
+            <span>histtype:</span> optional parameter used to create different types
+            of histograms like:-bar, bar stacked, step, step filled and
+            the default is a bar<br>
+        </p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+#draw random samples from random distributions.
+x = np.random.normal(170, 10, 250)
+#plot histograms
+plt.hist(x) plt.show()
+    </code>
+    </deckgo-highlight-code>
+        <img class="image img-big" src="../../../static/blog/about-cover/Matplotib/GIF-Mat/Histogram.png"/>
+
+
+
+        <!-- Subplot -->
+        <h3><span>Sub</span> Plots</h3>
+        <p>
+            <span>Subplots()</span> is a Matplotlib function
+            that is used to display multiple plots
+            in one figure. It takes various arguments
+            such as a number of rows, columns, or sharex, sharey axis.
+        </p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+# First create a grid of plots
+fig, ax = plt.subplots(2,2,figsize=(10,6)) #this will create the subplots with 2 rows and 2 columns
+#and the second argument is size of the plot
+# Lets plot all the figures
+ax[0][0].plot(x1, np.sin(x1), 'g') #row=0,col=0
+ax[0][1].plot(x1, np.cos(x1), 'y') #row=0,col=1
+
+ax[1][0].plot(x1, np.sin(x1), 'b') #row=1,col=0
+ax[1][1].plot(x1, np.cos(x1), 'red') #row=1,col=1
+plt.tight_layout()
+#show the plots
+plt.show()
+    </code>
+    </deckgo-highlight-code>
+
+        <img class="image img-big" src="../../../static/blog/about-cover/Matplotib/GIF-Mat/Sub.png"/>
+
+
+        <!--scatter-->
+        <h3><span>Scatter</span> Plot</h3>
+    <p>
+        <span>Scatter()</span> are used to observe
+        relationship between variables and
+        uses dots to represent the relationship
+        between them. The <span>scatter()</span> method in
+        the matplotlib library is used to draw a scatter plot.
+    </p>
+
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+#create the x and y axis coordinates
+x = np.array([5,7,8,7,2,17,2,9,4,11,12,9,6])
+y = np.array([99,86,87,88,111,86,103,87,94,78,77,85,86])
+plt.scatter(x, y)
+plt.legend()
+plt.show()
+    </code>
+    </deckgo-highlight-code>
+        <img class="image img-big" src="../../../static/blog/about-cover/Matplotib/GIF-Mat/Scatter.png"/>
+
+
+    <!-- Bar plot -->
+    <h3><span>Bar</span> Plot</h3>
+
+    <p>
+        A <span>bar()</span> or bar chart is a graph that
+        represents the category of data with rectangular
+        bars with lengths and heights that is proportional
+        to the values which they represent.<br>
+    </p>
+
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+plt.bar(x,height,width,bottom,align)
+    </code>
+    </deckgo-highlight-code>
+
+<p>
+    <span>x:</span> representing the coordinates of the x-axis<br>
+
+    <span>height:</span> the height of the bars
+
+    <span>width:</span> width of the bars. Its default value is 0.8<br>
+
+    <span>bottom:</span> It’s optional. It is a y-coordinate of the bar its default value is None<br>
+
+    <span>align:</span> center, edge its default value is center<br>
+    </p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+#define array
+data= [5. , 25. , 50. , 20.]
+plt.bar(range(len(data)), data,color='c')
+plt.show()
+    </code>
+    </deckgo-highlight-code>
+
+
+    <img class="image img-big" src="../../../static/blog/about-cover/Matplotib/GIF-Mat/Bar.png"/>
+
+
+
+    <!-- Box Plot-->
+    <h3><span>Box</span> Plot</h3>
+    <p>
+        A <span>boxplot()</span> is also known as Whisker plot is created to display
+        the summary of the set of data values having properties like
+        minimum, first quartile, median, third quartile and maximum.<br>
+
+        <span>data:</span> <a href="{% url 'numpy' %}">NumPy</a> array<br>
+
+        <span>vert:</span> It will take boolean values i.e true or false for the vertical and horizontal plot default is True<br>
+
+        <span>width:</span> This will take array and sets of the width of boxes, Optional parameters<br>
+
+        <span>Patch_artist:</span> It is used to fill the boxes with color and its default value is false<br>
+
+        <span>labels:</span> Array of strings which is used to set the labels of the dataset<br>
+    </p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+#create the random values by using numpy
+values= np.random.normal(100, 20, 300)
+#creating the plot by boxplot() function which is avilable in matplotlib
+plt.boxplot(values,patch_artist=True,vert=True)
+plt.show()
+    </code>
+    </deckgo-highlight-code>
+
+
+    <img class="image img-big" src="../../../static/blog/about-cover/Matplotib/GIF-Mat/Box.png"/>
+
+    <!-- Pie chart -->
+    <h3></h3>
+    <p>
+        A <span>pie()</span> is a circular statistical plot that can display only one series of data. The area of the chart is the total percentage of the given data. <br>
+        The area of slices of the pie represents the percentage of the parts of the data.
+    </p>
+
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+#define the figure size
+plt.figure(figsize=(7,7))
+x = [25,30,45,10]
+#labels of the pie chart
+labels = ['A','B','C','D']
+plt.pie(x, labels=labels)
+plt.show()
+    </code>
+    </deckgo-highlight-code>
+
+
+    <img class="image" src="../../../static/blog/about-cover/Matplotib/GIF-Mat/Pie.png"/>
+
+
+    <h3>Area Chart</h3>
+    <p>
+        An <span>area chart</span> is really similar to a line chart, except that the area between the x axis and the line is filled in with color or shading. It represents the evolution of a numeric variable. T
+
+        <span>x,y:</span> represent the x and y coordinates of the plot. This will take an array of length n.<br>
+
+        <span>Interpolate:</span> is a boolean value and is optional. If true, interpolate between the two lines to find the precise point of intersection.<br>
+
+        <span>**kwargs:</span> alpha, color, facecolor, edgecolur, linewidth.
+    </p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+y = [2, 7, 14, 17, 20, 27, 30, 38, 25, 18, 6, 1]
+#plot the line of the given data
+plt.plot(np.arange(12),y, color="blue", alpha=0.6, linewidth=2)
+#decorate thw plot by giving the labels
+plt.xlabel('Month', size=12)
+plt.ylabel('Turnover(Cr.)', size=12) #set y axis start with zero
+plt.ylim(bottom=0)
+plt.show()
+    </code>
+    </deckgo-highlight-code>
+
+    <img class="image" src="../../../static/blog/about-cover/Matplotib/GIF-Mat/Area.png"/>
+
+    <!-- Labels tickets -->
+    <h3>Setting <span>Ticks</span> and Tick <span>Labels</span></h3>
+    <p>
+        Ticks are the markers denoting data points on axes,
+        in the previous examples they take automatically over the task
+        of spacing points on the axis.
+        These can be accessed either through the <span>PyPlot</span>
+        instance, or the <span>Axes</span> instance.
+    </p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+fig, ax = plt.subplots(figsize=(12, 6))
+
+x = np.arange(0, 10, 0.1)
+y = np.sin(x)
+z = np.cos(x)
+
+ax.plot(y, color='blue', label='Sine wave')
+ax.plot(z, color='black', label='Cosine wave')
+
+plt.xlim([25, 50])
+plt.show()
+    </code>
+    </deckgo-highlight-code>
+
+    <img class="image" src="../../../static/blog/about-cover/Matplotib/GIF-Mat/Tickets.png"/>
+
+
+    <h3><span>+ </span>Source</h3>
+        <p>- <a href="https://matplotlib.org/stable/index.html">matplotib docs</a></p>
+        <p>- <a href="https://devdocs.io/matplotlib~3.1/">Devdocs</a></p>
+
+
+
+
+    <h3><span>+ </span>Exercices</h3>
+        <p>- <a href="https://www.geeksforgeeks.org/how-to-plot-a-complex-number-in-python-using-matplotlib/">plot a complex number in Python using Matplotlib ?</a></p>
+        <p>- <a href="https://www.geeksforgeeks.org/visualization-of-merge-sort-using-matplotlib/">Visualization of Merge sort using Matplotlib</a></p>
+        <p>- <a href="https://www.geeksforgeeks.org/how-to-plot-mean-and-standard-deviation-in-pandas/">Plot Mean and Standard Deviation in Pandas?</a></p>
+        <p>- <a href="https://www.geeksforgeeks.org/3d-visualisation-of-quick-sort-using-matplotlib-in-python/">3D Visualisation of Quick Sort using Matplotlib in Python</a></p>
+
+
+
+    <h3><span>+ </span>Conclusion</h3>
+        <p>
+            now you know the basic plotting library in python, and the basic
+            information about the different types of charts for
+            the statistical analysis which is commonly used.
+
+        </p>
+
+
+
+
+
+</div>
+
+</section>
+{% endblock %}
+<!--Article End-->
+
+{% block footer %}
+<footer>
+          <div class="footer" id="footer"  style="display: none">
+                <div class="footer-content">
+                <h3>Doflamingo</h3>
+                <p>Get to know us her on social media if you have any questions or just want to visit, anyway</p>
+                    <ul class="socials">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                    </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>copyright &copy;2021 Doflamingo. designed by <span>Me</span></p>
+            </div>
+          </div>
+    </footer>
+{% endblock %}

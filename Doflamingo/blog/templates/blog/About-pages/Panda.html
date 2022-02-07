@@ -1,0 +1,817 @@
+{% extends "blog/Base/About.html" %}
+{% load static %}
+{% block title %}
+    Panda
+{% endblock %}
+
+
+<!--Cover Start-->
+{% block cover %}
+{% include 'blog/Loader/Loader.html' %}
+<link rel="stylesheet" href="{% static 'blog/css/about/panda.css' %}">
+<script type="text/javascript">
+        document.addEventListener("mousemove", parallax);
+        function parallax(e){
+          document.querySelectorAll(".btn-panda").forEach(function(move){
+            var moving_value = move.getAttribute("data-value");
+            var x = (e.clientX * moving_value)/100;
+            var y = (e.clientY * moving_value)/300;
+
+        move.style.transform = "translateX(" + x + "px) translateY(" + y + "px)";
+
+    });
+    }
+</script>
+<section class="banner panda" id="header">
+    <div class="container">
+        <div id="scene">
+            <div class="layer"><img src="../../../static/blog/about-cover/Panda/Background.png"/></div>
+            <div class="layer" data-depth-x="0.5"><img src="../../../static/blog/about-cover/Panda/Naizka.png"/></div>
+            <div class="layer none" data-depth-x="-0.6"><img src="../../../static/blog/about-cover/Panda/Moon.png"/></div>
+            <div class="layer none" data-depth-x="0.9"><img src="../../../static/blog/about-cover/Panda/Wheels.png"/></div>
+            <div class="layer none" data-depth-x="-0.9"><img src="../../../static/blog/about-cover/Panda/Panda.png"/></div>
+            <div class="layer"><img src="../../../static/blog/about-cover/Panda/Fog.png"/></div>
+
+            <div class="layer" data-depth-x="0.1"><img src="../../../static/blog/about-cover/Panda/Cliff.png"/></div>
+            <div class="layer"><img src="../../../static/blog/about-cover/Panda/Tree-fog.png"/></div>
+            <div class="layer" data-depth-x="-0.1"><img src="../../../static/blog/about-cover/Panda/Girl.png"/></div>
+
+            <div class="layer"><img src="../../../static/blog/about-cover/Panda/Vintage.png"/></div>
+            <div class="layer" data-depth="0.4"><img src="../../../static/blog/about-cover/Panda/Sparks.png"/></div>
+
+                <!-- in respinsive -->
+            <div class="layer res-disp" data-depth-y="-0.6"><img src="../../../static/blog/about-cover/Panda/Moon.png"/></div>
+            <div class="layer res-disp" data-depth-y="0.9"><img src="../../../static/blog/about-cover/Panda/Wheels.png"/></div>
+        </div>
+
+    </div>
+
+    <img class="banner-logo" src="../../../static/blog/about-cover/Panda/GIF-Panda/panda-logo-resp.png"/>
+    <a href="#container" class="scroll-down" onclick="TestsFunction()"></a>
+
+        <div class="btn-panda" data-value="4">
+            <a href="#article" onclick="TestsFunction()"><span>Explore</span></a>
+        </div>
+</section>
+{% endblock %}
+<!--Cover End-->
+
+<!--Article Start-->
+{% block article %}
+<section class="article article-panda" id="article">
+   <div class="panda-container"  id='container' style="display: none" >
+
+    <h1 data-aos="flip-down">The pythonic portal to be a Kungfu <span>pandas</span></h1>
+       <img class="cover" src="../../../static/blog/about-cover/Panda/GIF-Panda/Cover-panda.gif"/>
+       <h3>What is <span>Panda</span> ?:</h3>
+    <p>
+        <span>Pandas</span> is an open-source Python Library providing
+        high-performance data manipulation and analysis tool
+        using its powerful data structures, is one of the most widely-used Python libraries in data science and analytics, This library is built on top of the NumPy library.
+    </p>
+       <h3>Why <span>Pandas</span> is used for <span>Data Science</span> ?:</h3>
+       <img class="gif" src="../../../static/blog/about-cover/Panda/GIF-Panda/Thinking face.gif"/>
+       <p>
+           <span>panda</span> are generally used for data science but have you wondered why?<br>
+            This is because pandas are used in conjunction with other libraries that are used for
+           data science. It is built on the top of the NumPy library which means that a lot of
+           structures of NumPy are used or replicated in Pandas. The data produced by Pandas are
+           often used as input for plotting functions of Matplotlib, statistical analysis in SciPy,
+           machine learning algorithms in Scikit-learn.
+       </p>
+       
+       <div class="row">
+           <div class="left">
+               <img src="../../../static/blog/about-cover/Panda/GIF-Panda/pandas-logo.png"/>
+           </div>
+           <div class="right">
+           <p>
+                + <span>Advantages</span><br>
+               <span>1 -</span> Fast and efficient for manipulating and analyzing data.<br>
+
+                <span>2 -</span> Data from different file objects can be loaded.<br>
+
+                <span>3 -</span> Easy handling of missing data in floating point as well as non-floating point data<br>
+
+                <span>4 -</span> Size mutability , columns can be inserted and deleted from DataFrame and higher dimensional objects<br>
+
+                <span>5 -</span> Data set merging and joining. <br>
+
+                <span>6 -</span> Flexible reshaping and pivoting of data sets<br>
+
+                <span>7 -</span> Provides time-series functionality. <br>
+
+                <span>8 -</span> Powerful group by functionality for performing split-apply-combine operations on data sets.
+           </p>
+           </div>
+       </div>
+
+       <h3>+ install <span>panda</span></h3>
+       <img class="gif" src="../../../static/blog/about-cover/Panda/GIF-Panda/Construction.gif"/>
+       <p>
+           Standard Python distribution doesn't come bundled with Pandas module.
+           A lightweight alternative is to install NumPy using popular Python package installer, pip.
+       </p>
+
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+pip install pandas
+    </code>
+    </deckgo-highlight-code>
+
+       <p>
+           If you install Anaconda Python package, Pandas will be installed by default with the following.<br>
+           + <span>Windows :</span><br>
+
+            - <a href=" https://www.continuum.io"><span>Anaconda</span></a>: is a free Python distribution for SciPy stack. It is also available for Linux and Mac.<br>
+
+            - <a href="https://www.enthought.com/products/canopy/"><span>Canpy</span></a>: is available as free as well as commercial distribution with full SciPy stack for Windows, Linux and Mac.<br>
+
+           - <a href="http://python-xy.github.io/"><span>Python (x,y)</span></a>: is a free Python distribution with SciPy stack and Spyder IDE for Windows OS.
+       </p>
+
+
+       <h3><span>Data</span> Structures</h3>
+       <img class="gif" src="../../../static/blog/about-cover/Panda/GIF-Panda/Data analysis.gif"/>
+       <p>
+           <span>Pandas</span> deals with the following three data structures:<br>
+
+            - <span>Series :</span> 1 <span>D</span>imension.<br>
+            - <span>DataFrame :</span> 2 <span>D</span>imension.<br>
+            - <span>Panel :</span> 3 <span>D</span>imension.<br>
+
+            These data structures are built on top of Numpy
+            array, which means they are fast.<br>
+
+            The best way to think of these data structures is that the higher dimensional data structure
+            is a container of its lower dimensional data structure. For example, DataFrame is a container
+            of Series, Panel is a container of DataFrame.
+       </p>
+
+       <h4>
+           - <span>DataFrame :</span>
+       </h4>
+           <img class="image" src="../../../static/blog/about-cover/Panda/GIF-Panda/pandas-dataframe.png"/>
+        <p>
+           <span>Pandas DataFrame</span> is a two-dimensional size-mutable, potentially heterogeneous
+                    tabular data structure with labeled axes
+                    (rows and columns). A Data frame is a two-dimensional data structure, i.e.,
+                        data is aligned in a tabular fashion in rows and columns. Pandas DataFrame
+                            consists of three principal components, the data, rows, and columns.
+            A pandas DataFrame can be created using the following constructor
+       </p>
+
+
+
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+pandas.DataFrame( data, index, columns, dtype, copy)
+    </code>
+    </deckgo-highlight-code>
+
+    <p>
+        - Creating a <span>DataFrame</span> :<br>
+        In the real world, a <span>panda</span> DataFrame will be created by loading the datasets
+        from existing storage, storage can be SQL Database, CSV file, an Excel file. Pandas DataFrame
+        can be created from the lists, dictionary, and from a list of dictionaries, etc.
+    </p>
+
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+#import pandas
+import pandas as pd
+
+# Calling DataFrame constructor
+data = pd.DataFrame()
+print(data)
+
+# list of strings
+lst = ['Do', 'Flam', 'ingo', 'is',
+            'the', 'king', 'pirates',
+	'of', 'pythonline']
+
+# Calling DataFrame constructor on list
+data = pd.DataFrame(lst)
+print(data)
+    </code>
+    </deckgo-highlight-code>
+
+       <div class="output">
+       <p><span>Output :</span></p>
+       </div>
+
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+Empty DataFrame
+Columns: []
+Index: []
+        0
+0   do
+1   Flam
+2   ingo
+3   is
+4   the
+5   king
+6   pirates
+7   of
+8   pythonline
+    </code>
+    </deckgo-highlight-code>
+
+       <p>Select an Index or
+           Column From a <span>Pandas</span>
+           DataFrame
+
+           selecting an index, column or value from your
+           DataFrame isn’t that hard, quite the contrary.
+           It’s similar to what you see in other languages
+           or packages, that are used for data analysis
+       </p>
+
+
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+# Using 'iloc[]'
+print(data.iloc[0][0])
+
+# Using 'loc[]'
+print(data.loc[0]['A'])
+
+# Using 'at[]'
+print(data.at[0,'A'])
+
+# Using 'iat[]'
+print(data.iat[0,0])
+    </code>
+    </deckgo-highlight-code>
+
+       <div class="output">
+       <p><span>Output :</span></p>
+       </div>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+1
+1
+1
+1
+    </code>
+    </deckgo-highlight-code>
+
+       <p>The most important ones to remember are, without a doubt, <span>.loc[]</span> and <span>.iloc[]</span></p>
+
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+#print the row 0
+print(data.iloc[0])
+
+#print column the column A
+print(data.loc[:,'A'])
+    </code>
+    </deckgo-highlight-code>
+
+       <div class="output">
+            <p><span>Output :</span></p>
+       </div>
+
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+    A    1
+    B    2
+    C    3
+Name: 0, dtype: int64
+    0    1
+    1    4
+    2    7
+Name: A, dtype: int64
+    </code>
+    </deckgo-highlight-code>
+
+        <h3>- Add an Index, Row or Column to a <span>Pandas DataFrame</span></h3>
+       <img class="gif" src="../../../static/blog/about-cover/Panda/GIF-Panda/Collaboration.gif"/>
+       <p>
+            - Adding an Index to a <span>DataFrame</span>
+            When you create a DataFrame, you have the option to add input to the 'index' argument to
+           make sure that you have the index that you want.
+       </p>
+
+
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+# Print out your DataFrame
+print(data)
+
+#index of your DataFrame
+data.set_index('C')
+    </code>
+    </deckgo-highlight-code>
+
+       <p>
+           However, even when your index is specified for you automatically,
+           you still have the power to re-use one of your columns and make it your
+           index. You can easily do this by calling <span>set_index()</span> on your DataFrame.
+       </p>
+
+       <div class="output">
+            <p><span>Output :</span></p>
+       </div>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+   A  B  C
+0  1  2  3
+1  4  5  6
+    </code>
+    </deckgo-highlight-code>
+
+       <p>
+           -<span> Adding Rows to a DataFrame</span> :<br>
+            the concept of loc and how it differs from other indexing attributes such as .iloc[] and .ix[]:<br>
+
+            - <span>.loc[]</span> : works on labels of your index.<br>
+            - <span>.iloc[]</span> : works on the positions in your index.<br>
+            - <span>.ix[]</span> : is a more complex case: when the index is integer-based, you pass a label to <span>.ix[]</span>.
+       </p>
+
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+data = pd.DataFrame(data=np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]]), index= [2, 'A', 4], columns=[48, 49, 50])
+
+# print the first column
+print(data.loc[2])
+
+# print the third column
+print(data.iloc[2])
+
+# print the third column
+print(data.ix[2])
+    </code>
+    </deckgo-highlight-code>
+
+    <div class="output">
+        <p><span>output</span></p>
+    </div>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+    48    1
+    49    2
+    50    3
+Name: 2, dtype: int64
+    48    7
+    49    8
+    50    9
+Name: 4, dtype: int64
+    48    7
+    49    8
+    50    9
+Name: 4, dtype: int64
+    </code>
+    </deckgo-highlight-code>
+
+       <p>
+        - <span>Adding a Column to Your DataFrame</span> :<br>
+        take a column from your DataFrame or by referring to a column that
+           you haven’t made yet and assigning it to the <span>.index</span> .
+       </p>
+
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+#create your dataframe
+data = pd.DataFrame(data=np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]]), columns=['A', 'B', 'C'])
+
+# indexing to 'D'
+data['D'] = data.indDex
+
+# Print the datafram
+print(data)
+    </code>
+    </deckgo-highlight-code>
+
+        <div class="output">
+       <p><span>Output :</span></p>
+       </div>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+   A  B  C  D
+0  1  2  3  0
+1  4  5  6  1
+2  7  8  9  2
+    </code>
+    </deckgo-highlight-code>
+
+
+       <p>
+           - <span>append columns to your DataFrame</span> :<br>
+
+            use <span>.loc[]</span> or <span>.iloc[].</span><br>
+            In this case, you add a Series to an existing DataFrame with the help of <span>.loc[]</span>
+       </p>
+
+
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+# Study the DataFrame 'data'
+print(data)
+
+# Append a column to 'data'
+data.loc[:, 4] = pd.Series(['5', '6'], index=data.index)
+
+# Print out 'data'
+print(data)
+    </code>
+    </deckgo-highlight-code>
+
+       <div class="output">
+       <p><span>Output :</span></p>
+       </div>
+
+
+           <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+   1  2  3
+0  1  1  2
+1  3  2  4
+   1  2  3  4
+0  1  1  2  5
+1  3  2  4  6
+    </code>
+    </deckgo-highlight-code>
+
+       <p>
+            Remember a Series object is much like a column of a DataFrame. That explains why you can easily add a Series to an existing DataFrame.
+       </p>
+
+
+       <h4>
+           - <span>Series</span> :<br>
+       </h4>
+
+       <img class="image" src="../../../static/blog/about-cover/Panda/GIF-Panda/pandas-series.png"/>
+
+       <p>
+            Series is a one-dimensional labeled array capable of holding
+           data of any type (integer, string, float, python objects, etc.).
+           The axis labels are collectively called index.<br>
+
+            A <span>pandas Series</span> can be created using the following constructor<br>
+        </p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+pandas.Series( data, index, dtype, copy)
+    </code>
+    </deckgo-highlight-code>
+
+       <div class="example">
+       <p><span>Example :</span></p>
+       </div>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+#import numpy and panda
+import pandas as pd
+import numpy as np
+
+
+# Make empty series
+serie = pd.Series()
+
+#print serie
+print(serie)
+
+# simple array
+data = np.array(['d', 'o', 'f', 'l', 'a', 'm', 'i', 'n', 'g', 'o'])
+
+ser = pd.Series(data)
+print(serie)
+    </code>
+    </deckgo-highlight-code>
+
+       <div class="output">
+       <p><span>Output :</span></p>
+       </div>
+
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+Series([], dtype: float64)
+0    d
+1    o
+2    f
+3    l
+4    a
+5    m
+6    i
+7    n
+8    g
+9    o
+dtype: object
+    </code>
+    </deckgo-highlight-code>
+
+
+
+       <p>
+           - <span>Accessing element of Series</span> :<br>
+            you can access its indexes, data, and even individual elements.<br>
+            The data in the Series can be accessed similar to that in the ndarray.
+       </p>
+
+
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+import pandas as pd
+serie = pd.Series([1,2,3,4,5,6,7,8,9,10],index = ['d','o','f','l','a','m','i','n','g','o'])
+
+#retrieve the first element
+print serie[0]
+    </code>
+    </deckgo-highlight-code>
+
+       <div class="output">
+       <p><span>Output :</span></p>
+       </div>
+
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+D
+    </code>
+    </deckgo-highlight-code>
+
+
+       <p>
+          - <span>Retrieving Index and data of a series</span> :<br>
+            retrieve the index array and data array of an existing Series object by
+           using the attributes index and values.
+       </p>
+
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+#import numpy and pandas
+import numpy as np
+import pandas as pd
+
+#Make series
+exp_x=pd.Series(data=[1,3,5,7])
+exp_y=pd.Series(data=[91.2,11.6,42.6,15.4,41.2,12.1,34.8,91.4,12.4,44.6], index=['d','o','f','l','a','m','i','n','g','o'])
+
+#print index and value exp_x
+print(exp_x.index)
+print(exp_x.values)
+
+#print index and value exp_y
+print(exp_y.index)
+print(exp_y.values)
+    </code>
+    </deckgo-highlight-code>
+
+       <div class="output">
+       <p><span>Output :</span></p>
+       </div>
+
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+RangeIndex(start=1, stop=11, step=1)
+[1 3 5 7]
+Index(['d','o','f','l','a','m','i','n','g','o'], dtype='object')
+[91.2 11.6 42.6 15.4 41.2 12.1 34.8 91.4 12.4 44.6]
+    </code>
+    </deckgo-highlight-code>
+
+
+       <p>
+           - <span>Retrieving Dimension ,Size and Number of bytes</span> :
+       </p>
+
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+#import numpy and pandas
+import numpy as np
+import pandas as pd
+
+exp_a=pd.Series(data=[1,2,3,4])
+exp_b=pd.Series(data=[4.9,8.2,5.6],index=['x','y','z'])
+
+#printing number of dimensions and number of elements in this object
+print(exp_a.ndim, exp_b.ndim)
+print(exp_a.size, exp_b.size)
+print(exp_a.nbytes, exp_b.nbytes)
+    </code>
+    </deckgo-highlight-code>
+
+       <div class="output">
+       <p><span>Output :</span></p>
+       </div>
+
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+1  1
+4  3
+32 24
+    </code>
+    </deckgo-highlight-code>
+
+
+       <h3>- Most Important <span>Pandas</span> Functions</h3> :
+       <img class="gif" src="../../../static/blog/about-cover/Panda/GIF-Panda/Analyze.gif"/>
+       <p>
+          <span>1</span>-<span>read_csv</span>:<br>
+            <span>read_csv()</span> function helps read a comma-separated
+           values <span>(csv)</span> file into a Pandas DataFrame.
+       </p>
+
+
+
+       <p>
+        <span>2</span>-<span>describe</span>:<br>
+        <span>describe()</span> is used to generate
+           descriptive statistics of the data in a <span>Pandas</span> DataFrame or Series.
+           It summarizes central tendency and dispersion of the dataset.
+       </p>
+
+
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+data.describe()
+    </code>
+    </deckgo-highlight-code>
+
+       <div class="output">
+       <p><span>Output :</span></p>
+       </div>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+    	    Age	         City temp      Salary
+count	    9.000000	 8.000000       9.000000
+mean	    32.000000	 38.575000      44444.444444
+std	    5.894913	 1.771803       21360.659582
+min	    23.000000    35.500000	18000.000000
+25%	    29.000000	 38.300000	35000.000000
+50%	    32.000000	 38.950000	40000.000000
+75%	    38.000000	 39.175000	52000.000000
+max	    39.000000	 41.100000	85000.000000
+    </code>
+    </deckgo-highlight-code>
+
+
+       <p>
+           <span>3</span>-<span>memory_usage</span><br>
+            <span>memory_usage()</span> returns a Pandas Series having the memory usage
+           of each column (in bytes) in a <span>Pandas</span> DataFrame.
+       </p>
+
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+data.memory_usage(deep=True)
+    </code>
+    </deckgo-highlight-code>
+
+       <div class="output">
+       <p><span>Output :</span></p>
+       </div>
+
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+Index         80
+Name          559
+Age           72
+City          578
+State         584
+DOB           603
+Gender        553
+City temp     72
+Salary        72
+dtype: int64
+    </code>
+    </deckgo-highlight-code>
+
+
+       <p>
+           <span>4</span>-<span>head()</span><br>
+            <span>head(n)</span> is used to return the first n rows of a
+           dataset. By default, data.head() will return the first 5 rows of the DataFrame.
+       </p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+data.head(4)
+    </code>
+    </deckgo-highlight-code>
+
+       <div class="output">
+       <p><span>Output :</span></p>
+       </div>
+
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+	Name	Age	City	Place	DOB             gnd	temp    Salary
+0	salim	29	meknes	berima	30-08-1994	Male	33.5	75000
+1	aslan	23	dakhla	palmas	11-12-1977	Male	34.0	95000
+2	hamza	35	casa	cali	07-04-2000	Male	31.7	91000
+3	mehdi	25	rabat	agdal	10-02-1991	Male	35.5	83000
+    </code>
+    </deckgo-highlight-code>
+
+
+       <p>
+           <span>5</span>-<span>groupby</span><br>
+            <span>groupby()</span> is used to group a Pandas DataFrame by 1 or more columns, and perform some mathematical operation on it.
+       </p>
+
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+data.groupby(by='State').Salary.mean()
+    </code>
+    </deckgo-highlight-code>
+
+       <div class="output">
+           <p><span>output :</span></p>
+       </div>
+
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+City
+dakhla        18000
+casablanca    18500
+rabat         27500
+marrakech     50000
+meknes        25000
+fes           40000
+Name: Salary, dtype: int64
+    </code>
+    </deckgo-highlight-code>
+
+
+    <div class="final">
+               <h3>+ <span>Source</span></h3>
+       <p><a href="https://pandas.pydata.org/docs/">Pandas Documentation</a></p>
+       <p><a href="https://pandasguide.readthedocs.io/en/latest/">Pandas Guide</a></p>
+       <p><a href="https://spark.apache.org/docs/latest/api/python/user_guide/pandas_on_spark/index.html">Spark Docs</a></p>
+
+
+       <h3>+ <span>exercice</span></h3>
+       <p><a href="https://www.w3resource.com/python-exercises/pandas/index.php">Pandas puzzele</a></p>
+       <p><a href="https://www.machinelearningplus.com/python/101-pandas-exercises-python/">101 Pandas Exercice for ds</a></p>
+       <p><a href="https://favtutor.com/blogs/pandas-exercises-python">20 Pandas Exercice for begginers</a></p>
+    </div>
+
+
+       <h3>+ <span>Conclusion</span></h3>
+       <p>As a beginner, you have to focus on these basics and
+           I promise you that you will become kungfu pandas with
+           practice, I also recommend that you read <span>pandas documentation</span>
+To expand your knowledge and wait for us in the next articles
+           where we will delve more in the field of <span>data science</span> and <span>data analysis</span></p>
+
+
+   </div>
+</section>
+{% endblock %}
+<!--Article End-->
+
+<!--Footer Start-->
+{% block footer %}
+<footer class="footer" id="footer" style="display:none;">
+            <div class="footer-content">
+                <h3>code opacity</h3>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo iste corrupti doloribus odio sed!</p>
+                    <ul class="socials">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                    </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>copyright &copy;2020 codeOpacity. designed by <span>nethunt</span></p>
+            </div>
+    </footer>
+{% endblock %}
+<!--Footer End-->

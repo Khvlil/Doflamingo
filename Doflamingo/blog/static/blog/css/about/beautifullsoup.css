@@ -1,0 +1,642 @@
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+    background-color: #6b1c1c ;
+}
+
+/* navbar styling */
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: #6395ff;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #ff2e2e;
+}
+
+.navbar{
+    position: fixed;
+    display: block;
+    width: 100%;
+    z-index: 1100;
+    padding: 30px 0;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.navbar.sticky{
+    padding: 15px 0;
+    background: #ffffff;
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo a{
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+}
+.navbar .logo a span{
+    color: #882026;
+    transition: all 0.3s ease;
+}
+
+.navbar.sticky .logo a{
+    color: #121212;
+}
+.navbar.sticky .logo a span{
+    color: #882026;
+}
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a{
+    display: block;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+.navbar .menu li a:hover{
+    color: #ff474f;
+}
+.navbar.sticky .menu li a:hover{
+    color: #6B5456;
+}
+/* menu btn styling */
+.menu-btn{
+    color: #b2484d;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: #882026;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    border-bottom-width: 2px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.scroll-up-btn.show{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+.scroll-up-btn:hover{
+    filter: brightness(90%);
+}
+
+/* Navbar End */
+
+/* Article-beautifullsoup Start */
+.article-beautifullsoup{
+    position: relative;
+    background: #ffffff;
+
+}
+
+.beautifullsoup-container {
+    padding: 80px 30px 20px 30px;
+}
+
+.beautifullsoup-container h1{
+    position: relative;
+    padding: 0 0 45px 0;
+    font-size: 6em;
+    margin-left: 70px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.beautifullsoup-container h1 span{
+        color: #882026 ;
+}
+
+.beautifullsoup-container p{
+    position: relative;
+    font-size: 2rem;
+    max-width: 100%;
+    padding: 0 370px 25px 0;
+    margin-left: 250px;
+
+}
+
+.beautifullsoup-container p span{
+    color: #882026 ;
+    font-weight: 900 ;
+}
+
+.beautifullsoup-container p span{
+    color: #d51733;
+    font-weight: 900 ;
+}
+
+.beautifullsoup-container p a{
+    color: #810f24;
+    font-weight: 500;
+}
+
+.beautifullsoup-container p a:hover{
+    color: #ff003b;
+}
+
+
+.beautifullsoup-container h3{
+    margin-left: 150px;
+    font-size: 3.7rem;
+    padding: 12px;
+}
+
+.beautifullsoup-container h3 span{
+    color: #882026;
+}
+
+.beautifullsoup-container .logo{
+    position: relative;
+    display: block;
+    left: 20%;
+    max-width: 50%;
+}
+
+.beautifullsoup-container .cover{
+    position: relative;
+    align-items: center;
+}
+
+.beautifullsoup-container p,
+.beautifullsoup-container h1{
+    color: #000000;
+}
+
+.beautifullsoup::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to top, rgb(255, 255, 255), transparent);
+    z-index: 1000;
+}
+/* Article-beautifullsoup End */
+
+/*beautifullsoup button Start*/
+.btn-beautifullsoup
+{
+    display: flex;
+    margin-top: 29rem;
+    margin-right: 170rem;
+    flex-wrap: wrap;
+}
+.btn-beautifullsoup a {
+    position: relative;
+    display: inline-block;
+    padding: 9px 28px;
+    border: 2px solid #882026;
+    margin: 40px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    Letter-spacing: 2px;
+    color: #fff;
+    -webkit-box-reflect: below 0px linear-gradient(transparent, #0002);
+    transition: 0.5s;
+    transition-delay: 0s;
+
+}
+
+.btn-beautifullsoup a span{
+    position: relative;
+    z-index: 100;
+    font-size: 20px;
+}
+
+.btn-beautifullsoup a:hover
+{
+    transition-delay: 1.5s;
+    color: #ffffff;
+    box-shadow: 0 0 10px #882026,
+                0 0 20px #882026,
+                0 0 40px #882026,
+                0 0 80px #882026 ,
+                0 0 160px #882026;
+
+}
+.btn-beautifullsoup a:nth-child(2)
+{
+    filter: hue-rotate(80deg);
+}
+.btn-beautifullsoup a::before {
+    content: '';
+    position: absolute;
+    Left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 2px;
+    background: #882026;
+    box-shadow: 5px -8px 0 #882026,
+                5px 8px 0 #882026;
+    transition: width 0.5s, left 0.5s, height 0.5s,
+    box-shadow 0.5s;
+    transition-delay: 1s,0.5s,0s,0s;
+}
+.btn-beautifullsoup a:hover::before{
+    width: 60%;
+    height: 110%;
+    Left: -2px;
+    box-shadow: 5px 0 0 #882026,
+                5px 0 0 #882026;
+    transition-delay: 0s,0.5s,1s,1s;
+}
+
+.btn-beautifullsoup a::after {
+    content: '';
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 2px;
+    background: #882026;
+    box-shadow: -5px -8px 0 #882026,
+                -5px 8px 0 #882026;
+    transition: width 0.5s, left 0.5s, height 0.5s,
+    box-shadow 0.5s;
+    transition-delay: 1s,0.5s,0s,0s;
+}
+.btn-beautifullsoup a:hover::after{
+    width: 60%;
+    height: 110%;
+    right: -2px;
+
+    box-shadow: -5px 0 0 #882026,
+                -5px 0 0 #882026;
+    transition-delay: 0s,0.5s,1s,1s;
+}
+/*beautifullsoup button End*/
+
+
+/* textbox-beautifullsoup Start */
+
+deckgo-highlight-code{
+    position: relative;
+    width: 800px;
+    padding: 0;
+    margin: 0 auto;
+    font-size: 15px;
+    margin-bottom: 30px;
+    text-transform: lowercase;
+}
+
+/* textbox-beautifullsoup End */
+
+
+/* Loader */
+.loader{
+        overflow: hidden;
+    box-sizing: border-box;
+    position: fixed;
+    padding:0;
+    margin:0;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999999;
+    background: #882026;
+     background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.loader span{
+    width: 50px;
+    height: 300px;
+    margin: 0 20px;
+    background: #882026 ;
+    animation: animate 1.4s linear infinite;
+}
+
+.loader span:nth-child(1){
+    animation-delay: 0s;
+}
+.loader span:nth-child(2){
+    animation-delay: 0.2s;
+}
+.loader span:nth-child(3){
+    animation-delay: 0.4s;
+}
+.loader span:nth-child(4){
+    animation-delay: 0.6s;
+}
+.loader span:nth-child(5){
+    animation-delay: 0.8s;
+
+}.loader span:nth-child(6){
+    animation-delay: 1s;
+}
+.loader span:nth-child(7){
+    animation-delay: 1.2s;
+}
+
+@keyframes animate {
+    0%{
+        box-shadow: 0 0 0 rgb(0,0,0,.5);
+        opacity: 0;
+        transform: translateX(-50px) scale(1);
+    }
+    50%{
+        box-shadow: 0 20px 050px rgb(0,0,0,.5);
+        opacity: 1;
+        transform: translateX(0px) scale(1.2);
+
+    }
+    100%{
+        box-shadow: 0 0 0 rgb(0,0,0,.5);
+        opacity: 0;
+        transform: translateX(50px) scale(1);
+    }
+}
+
+/* Loader end */
+
+@media (max-width: 947px) {
+    .menu-btn {
+        display: block;
+        z-index: 999;
+    }
+
+    .menu-btn i.active:before {
+        content: "\f00d";
+    }
+
+    .navbar .menu {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #111;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+
+    .navbar .menu.active {
+        left: 0;
+    }
+
+    .navbar .menu li {
+        display: block;
+    }
+
+    .navbar .menu li a {
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+
+    .navbar .max-width .menu-btn{
+        padding: 0 40px;
+        right: 100%;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    html,body{
+        width:100%;
+        overflow-x:hidden;
+
+    }
+
+
+    .article-beautifullsoup .beautifullsoup-container h1 {
+        align-items: center;
+        text-align: center;
+    }
+
+    .article-beautifullsoup .beautifullsoup-container p{
+        padding: 0 30px 0 30px;
+    }
+
+    .beautifullsoup .btn-beautifullsoup{
+        margin-left: 50px;
+    }
+}
+
+
+@media (max-width: 916px) {
+    .btn-beautifullsoup{
+        display: none;
+    }
+
+    .scroll-down{
+        align-items: center;
+         height: 80px;
+         width: 50px;
+         border: 3.7px solid #FF8896FF;
+         position: absolute;
+         bottom: 50px;
+         border-radius: 50px;
+         cursor: pointer;
+    }
+
+    .scroll-down::before,
+    .scroll-down::after{
+        align-items: center;
+         content: '';
+         position: absolute;
+         top: 20%;
+         left: 50%;
+         border: 2px solid #ff8896;
+         height: 10px;
+         width: 10px;
+         transform: translate(-50%, -100%) rotate(45deg);
+         border-top: transparent;
+         border-left: transparent;
+        animation: scroll-down 1s ease-in-out infinite;
+    }
+    .scroll-down::after {
+        top: 30%;
+        animation-delay: .3s;
+    }
+
+    @keyframes scroll-down{
+      0% {
+        opacity: 0;
+        }
+     30% {
+         opacity: 1;
+     }
+    60% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        top: 90%;
+    }
+    }
+}
+
+
+@media (max-width: 320px) {
+
+ .navbar .max-width .menu-btn{
+       position: relative;
+     right: 57px;
+
+
+
+
+    }
+
+    .navbar .max-width .logo{
+       position: relative;
+       right: 57px;
+
+
+    }
+
+}
+
+@media (min-width:100px) and (max-width: 1281px){
+    .article-beautifullsoup .beautifullsoup-container h1{
+        margin: 0 auto;
+        overflow-wrap:break-word;
+    }
+
+        .article-beautifullsoup .beautifullsoup-container .cover,.gif{
+        display: block;
+        align-items: center;
+        padding: 0;
+        max-width: 100%;
+        margin: 0 auto;
+
+    }
+
+
+    .article-beautifullsoup .beautifullsoup-container p{
+        position: relative;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .article-beautifullsoup .beautifullsoup-container img{
+        max-width: 100%;
+        align-items: center;
+        padding: 10px;
+    }
+
+
+
+    .article-beautifullsoup .beautifullsoup-container .logo{
+        padding: 0;
+        max-width: 100%;
+        left: 6%;
+    }
+
+
+    .article-beautifullsoup .beautifullsoup-container h3{
+        padding: 0;
+        margin: 0.5em 0 0.5em;
+        width: 100%;
+        left: 0%;
+        font-size: 4em;
+        white-space: pre-line;
+        font-weight: 1000;
+    }
+
+
+    deckgo-highlight-code{
+        position: relative;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+}
+
+
+
+@media (min-width:1281px) {
+    .article-beautifullsoup .beautifullsoup-container .gif{
+        display: none;
+    }
+
+    .article-beautifullsoup .beautifullsoup-container .cover{
+        position: relative;
+        align-items: center;
+        left: 35%;
+        width: 500px;
+        height: 450px;
+    }
+}
+
+@media (orientation: portrait) {
+    .beautifullsoup .container #scene .layer.none{
+        display: none !important;
+    }
+
+    .beautifullsoup .layer.res-disp{
+        display: block !important;
+    }
+
+}
+
+@media (orientation: landscape){
+    .beautifullsoup .layer.res-disp{
+        display: none !important;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 1281px) {
+    .beautifullsoup .banner-logo{
+        display: block;
+        width: 35em;
+        height: auto;
+        margin: 0 auto;
+        padding: 0;
+        animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    }
+    @keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }
+
+}

@@ -1,0 +1,817 @@
+{% extends "blog/Base/About.html" %}
+{% load static %}
+{% block title %}
+    Numpy
+{% endblock %}
+
+
+<!--Preloade End-->
+    {% block preloade %}
+        {% include 'blog/Loader/Loader.html' %}
+    {% endblock %}
+<!--Preloade End-->
+
+<!--Cover Start-->
+{% block cover %}
+<link rel="stylesheet" href="{% static 'blog/css/about/numpy.css' %}"/>
+<script type="text/javascript">
+        document.addEventListener("mousemove", parallax);
+        function parallax(e){
+          document.querySelectorAll(".btn-numpy").forEach(function(move){
+            var moving_value = move.getAttribute("data-value");
+            var x = (e.clientX * moving_value)/250;
+            var y = (e.clientY * moving_value)/200;
+
+        move.style.transform = "translateX(" + x + "px) translateY(" + y + "px)";
+
+    });
+        }
+</script>
+<script>
+function hide() {
+  var x = document.getElementById("numpy");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
+<section class="banner numpy" id="numpy">
+    <div class="container">
+        <div id="scene">
+            <div class="layer" data-depth="0"><img src="../../../static/blog/about-cover/Numpy/Background.png"/></div>
+            <div class="layer" data-depth="0.2"><img src="../../../static/blog/about-cover/Numpy/Numpy.png"/></div>
+            <div class="layer" data-depth="0.1"><img src="../../../static/blog/about-cover/Numpy/Rider.png"/></div>
+            <div class="layer" data-depth="0"><img src="../../../static/blog/about-cover/Numpy/Right-block.png"/></div>
+            <div class="layer" data-depth="0"><img src="../../../static/blog/about-cover/Numpy/Tube.png"/></div>
+            <div class="layer" data-depth="0"><img src="../../../static/blog/about-cover/Numpy/Cable.png"/></div>
+            <div class="layer" data-depth-y="-0.1"><img src="../../../static/blog/about-cover/Numpy/Saprks.png"/></div>
+        </div>
+    </div>
+
+
+    <img class="banner-logo" src="../../../static/blog/about-cover/Numpy/GIF-Numpy/Numpy-logo-res.png"/>
+    <a href="#container" id="scroll-down" class="scroll-down" onclick="TestsFunction()"></a>
+
+
+    <div class="btn-numpy" data-value="4" style="right: 313px ; top: 81px" onclick="TestsFunction()">
+            <a href="#article" ><span>Explore</span></a>
+        </div>
+</section>
+{% endblock %}
+<!--Cover End-->
+
+
+<!--Article Start-->
+{% block article %}
+<section class="article article-numpy" id="article">
+    <div class="numpy-container"  id='container' style="display: none" >
+
+    <h1 data-aos="zoom-in">The right way to be a <span>data science</span> nerd</h1>
+        <img class="cover" src="../../../static/blog/about-cover/Numpy/GIF-Numpy/Cover-numpy.gif"/>
+        <h3>What is <span>NumPy</span> ?</h3>
+    <p>
+        NumPy is an open source library available in Python, which helps in mathematical,
+        scientific, engineering, and data science programming.
+        NumPy handles large datasets effectively and efficiently
+        As a data scientist or as an aspiring data science professional,
+        you need to have At least modest knowledge of numpy and how it works in Python.
+    </p>
+
+        <h3>Why <span>Numpy</span> is good library ?</h3>
+        <div class="row">
+            <div class="left">
+                <img src="../../../static/blog/about-cover/Numpy/GIF-Numpy/logo-numpy.png"/></div>
+            <div class="right">
+        <p>
+            NumPy would be a good candidate for the first library to explore after gaining basic comfort with the Python environment.
+            After NumPy, the next logical choices for growing your data science and scientific computing
+            capabilities might be SciPy and pandas. In short, learn Python, then NumPy, then SciPy, or pandas.<br>
+
+            <span>1</span>- Mathematical operations on <span>NumPy’s</span> ndarray objects are up to 50x faster than iterating over native Python lists using loops.<br>
+
+            <span>2</span>- It offers an Indexing syntax for easily accessing portions of data within an array.<br>
+
+            <span>3</span>- It contains built-in functions that improve quality of life when working with arrays and math, such as functions for linear algebra, array transformations, and matrix math.<br>
+
+            <span>4</span>- It requires fewer lines of code for most mathematical operations than native Python lists.<br>
+        </p>
+            </div>
+        </div>
+            <h3>Install <span>NumPy</span></h3>
+
+        <p>
+            You can install NumPy using Pip:
+        </p>
+
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+pip install numpy
+    </code>
+    </deckgo-highlight-code>
+
+        <p>
+            In Anaconda prompt:
+        </p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+conda install -c anaconda numpy
+    </code>
+    </deckgo-highlight-code>
+
+        <p>In Jupyter Notebook :</p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+import sys
+!conda install --yes --prefix {sys.prefix} numpy
+    </code>
+    </deckgo-highlight-code>
+
+        <h3>The basics Of <span>NumPy</span></h3>
+                <img class="gif" src="../../../static/blog/about-cover/Numpy/GIF-Numpy/Nerd.gif"/>
+        <p>
+            <span>NumPy arrays:</span><br>
+            NumPy arrays are very easy to create given the complex problems they solve.
+            To define an array manually, we can use the <span>np.array()</span> function.
+        </p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+-np.array([1,2,3,4])
+    </code>
+    </deckgo-highlight-code>
+
+               <div class="output">
+       <p><span>Output :</span></p>
+       </div>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <deckgo-slide-title>
+        <h1 slot="title">Output</h1>
+            <code slot="code">
+array([1, 2, 3, 4])
+            </code>
+        </deckgo-slide-title>
+    </deckgo-highlight-code>
+    </deckgo-slide-title>
+
+        <p>
+            In practice, there is no need to declare a Python List.
+            The operation can be combined.<br>
+            You can also specify the type of data in the dtype argument:
+        </p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+np.array([1,2,3,4],dtype=np.float32
+    </code>
+    </deckgo-highlight-code>
+               <div class="output">
+       <p><span>Output :</span></p>
+       </div>
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <deckgo-slide-title>
+        
+        <h1 slot="title">Output</h1>
+            <code slot="code">
+array([1., 2., 3., 4.], dtype=float32)
+            </code>
+        </deckgo-slide-title>
+    </deckgo-highlight-code>
+
+        <p>
+            NumPy arrays can be multi-dimensional too.<br>
+            Below, we pass a list of two elements, each of which
+            is a list containing two values. The result is a 2x2 matrix:
+        </p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+np.array([[1,2],
+	     [3,4]])
+    </code>
+    </deckgo-highlight-code>
+
+               <div class="output">
+       <p><span>Output :</span></p>
+       </div>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <deckgo-slide-title>
+
+        <h1 slot="title">Output</h1>
+            <code slot="code">
+array([[1, 2],
+	  [3, 4]])
+            </code>
+        </deckgo-slide-title>
+    </deckgo-highlight-code>
+
+        <p>
+            <span>Array of zeros:</span><br>
+            NumPy lets you create an array of all zeros using the <span>np.zeros()</span> method<br>
+            <span>numpy.zeros()</span> function Syntax :
+        </p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+numpy.zeros(shape, dtype=float, order='C')
+    </code>
+    </deckgo-highlight-code>
+
+        <p>
+            <span>1</span>- Shape: is the shape of the <span>numpy</span> zero array<br>
+            <span>2</span>- Dtype: is the datatype in <span>numpy</span> zeros. It is optional. The default value is float64<br>
+            <span>3</span>- Order: Default is C which is an essential row style for <span>numpy.zeros()</span> in Python.
+        </p>
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+np.zeros((2,3))
+    </code>
+    </deckgo-highlight-code>
+
+               <div class="output">
+       <p><span>Output :</span></p>
+       </div>
+        
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <deckgo-slide-title>
+
+        <h1 slot="title">Output</h1>
+            <code slot="code">
+array([[0., 0., 0.], [0., 0., 0.]])
+            </code>
+        </deckgo-slide-title>
+    </deckgo-highlight-code>
+
+        <p>
+            <span>Array of ones:</span><br>
+            you could also create an array of all 1s using the <span>np.ones()</span> method:<br>
+            Python <span>numpy.ones()</span> Syntax:
+        </p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+numpy.ones(shape, dtype=float, order='C')
+    </code>
+    </deckgo-highlight-code>
+
+        <p>
+            <span>1</span>- Shape: is the shape of the np.ones Python Array.<br>
+            <span>2</span>- Dtype: is the datatype in numpy ones. It is optional. The default value is float64.<br>
+            <span>3</span>- Order: Default is C which is an essential row style.<br>
+        </p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+np.ones(5,dtype=np.int32)
+    </code>
+    </deckgo-highlight-code>
+               <div class="output">
+       <p><span>Output :</span></p>
+       </div>
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <deckgo-slide-title>
+
+        
+        <h1 slot="title">Output</h1>
+            <code slot="code">
+array([1, 1, 1, 1, 1])
+            </code>
+        </deckgo-slide-title>
+    </deckgo-highlight-code>
+
+        <p>
+            <span>reshape:</span><br>
+            We can reshape an array into any compatible dimensions using  <span>numpy.reshape</span>.<br>
+
+            <span>Syntax of np.reshape()</span>
+        </p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+numpy.reshape(a, newShape, order='C')
+    </code>
+    </deckgo-highlight-code>
+
+        <p><span>Example :</span></p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+import numpy as np
+exp = np.array([(1,2,3), (4,5,6)])
+print(exp)
+exp.reshape(3,2)
+    </code>
+    </deckgo-highlight-code>
+
+        <p>
+            <span>1</span>- a: Array that you want to reshape.<br>
+            <span>2</span>- newShape: The new desires shape.
+        </p>
+       
+        
+               <div class="output">
+       <p><span>Output :</span></p>
+       </div>
+        
+        
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <deckgo-slide-title>
+ 
+        <h1 slot="title">Output</h1>
+            <code slot="code">
+ // Before reshape
+[[1 2 3]
+ [4 5 6]]
+
+//After Reshape
+array([[1, 2],
+	[3, 4],
+	[5, 6]])            </code>
+        </deckgo-slide-title>
+    </deckgo-highlight-code>
+
+        <p>
+        <span>flatten:</span><br>
+            Python NumPy Flatten function is used to return a copy of the array in one-dimension.<br>
+            <span>Syntax of np.flatten():</span>
+        </p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+numpy.flatten(order='C')
+    </code>
+    </deckgo-highlight-code>
+
+        <p>
+            <span>Order</span>: Default is C which is an essential row style.
+        </p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+import numpy as np
+exp  = np.array([(1,2,3), (4,5,6)])
+print(exp)
+exp.reshape(3,2)
+    </code>
+    </deckgo-highlight-code>
+        
+               <div class="output">
+       <p><span>Output :</span></p>
+       </div>
+        
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <deckgo-slide-title>
+
+        <h1 slot="title">Output</h1>
+            <code slot="code">
+array([[1, 2],[3, 4],[5, 6]])
+        </code>
+        </deckgo-slide-title>
+    </deckgo-highlight-code>
+
+        <p>
+            <span>numpy flatten:</span><br>
+            Sometimes when you have a multidimensional array and want to
+            collapse it to a single-dimensional array, you can either use
+            the <span>flatten()</span> method or the <span>ravel()</span> method:
+        </p>
+
+       <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+exp_a = np.ones((2,2))
+exp_b = exp_a.flatten()
+exp_c = a.ravel()
+print('Original shape :', exp_a.shape)
+print('Array :','\n', exp_a)
+print('Shape after flatten :',exp_b.shape)
+print('Array :','\n', exp_b)
+print('Shape after ravel :',exp_c.shape)
+print('Array :','\n', exp_c)
+    </code>
+    </deckgo-highlight-code>
+        
+               <div class="output">
+       <p><span>Output :</span></p>
+       </div>
+        
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <deckgo-slide-title>
+
+        <h1 slot="title">Output</h1>
+            <code slot="code">
+Original shape : (2, 2)
+Array :  [[1. 1.][1. 1.]]
+Shape after flatten : (4,)
+Array : [1. 1. 1. 1.]
+Shape after ravel : (4,)
+Array : [1. 1. 1. 1.]
+        </code>
+        </deckgo-slide-title>
+    </deckgo-highlight-code>
+
+        <p>
+            <span>hstack:</span><br>
+            <span>Numpy.hstack()</span> is a function in Python that is used to
+            horizontally stack sequences of input arrays in order to make a single array.
+        </p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+# Horitzontal Stack
+import numpy as np
+exp_a = np.array([1,2,3])
+exp_b = np.array([4,5,6])
+print('Horizontal Append:', np.hstack((exp_a, exp_b)))
+    </code>
+    </deckgo-highlight-code>
+        
+        
+       <div class="output">
+       <p><span>Output :</span></p>
+       </div>
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <deckgo-slide-title>
+        
+        <h1 slot="title">Output</h1>
+            <code slot="code">
+Horizontal Append: [1 2 3 4 5 6]
+        </code>
+        </deckgo-slide-title>
+    </deckgo-highlight-code>
+
+        <p>
+            <span>vstack:</span><br>
+            <span>Numpy.vstack()</span> is a function in Python which is used to vertically
+            stack sequences of input arrays in order to make a single array.
+        </p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+exp_a = np.arange(0,5)
+print('Array 1 :','\n',exp_a)
+print('Vertical stacking :','\n',np.vstack((exp_a,exp_b)))
+    </code>
+    </deckgo-highlight-code>
+       <div class="output">
+       <p><span>Output :</span></p>
+       </div>
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <deckgo-slide-title>
+        
+        
+        
+        <h1 slot="title">Output</h1>
+            <code slot="code">
+Array 1 :
+ [0 1 2 3 4]
+
+Vertical stacking :
+ [[0 1 2 3 4]
+ [5 6 7 8 9]]
+        </code>
+        </deckgo-slide-title>
+    </deckgo-highlight-code>
+
+        <p>
+            <span>NumPy Asarray:</span><br>
+            The <span>numpy.asarray()</span> function is used when you want to
+            convert an input to an array. The input could be a lists,
+            tuple, ndarray, etc.<br>
+            <span>Syntax:</span>
+        </p>
+
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+numpy.asarray(data, dtype=None, order=None)[source]
+    </code>
+    </deckgo-highlight-code>
+
+        <p>
+            <span>1</span> - data: Data that you want to convert to an array.<br>
+
+            <span>2</span> - dtype: This is an optional argument. If not specified, the data type is inferred from the input data.<br>
+
+            <span>3</span> - Order: Default is C which is an essential row style. Other option is F (Fortan-style).
+        </p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+np.asarray(exp)[3]=3
+print(exp)
+    </code>
+    </deckgo-highlight-code>
+       <div class="output">
+       <p><span>Output :</span></p>
+       </div>
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <deckgo-slide-title>
+        
+        
+        
+        
+        
+        <h1 slot="title">Output</h1>
+            <code slot="code">
+[[1. 1. 1. 1.]
+      [1. 1. 1. 1.]
+      [1. 1. 1. 1.]
+      [3. 3. 3. 3.] # new value
+      [1. 1. 1. 1.]]
+
+        </code>
+        </deckgo-slide-title>
+    </deckgo-highlight-code>
+
+
+        <p>
+            <span>Arange:</span><br>
+            The function <span>np.arange()</span> is great for creating vectors easily. Here, we
+            create a vector with values spanning 1 up to <span>#not including</span> 5:
+        </p>
+
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+np.arange(1,5)
+    </code>
+    </deckgo-highlight-code>
+
+       <div class="output">
+       <p><span>Output :</span></p>
+       </div>
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <deckgo-slide-title>
+        
+        
+        
+        <h1 slot="title">Output</h1>
+            <code slot="code">
+array([1, 2, 3, 4])
+        </code>
+        </deckgo-slide-title>
+    </deckgo-highlight-code>
+
+        <h3>Indexing and Slicing of <span>NumPy</span> Array</h3>
+                <img class="gif" src="../../../static/blog/about-cover/Numpy/GIF-Numpy/Data%20analysis.gif"/>
+        <p>
+            <span>Slicing 1-D NumPy arrays:</span>
+            Slicing means retrieving elements from one index
+            to another index. All we have to do is to pass the
+            starting and ending point in the index like this: [start: end].
+        </p>
+
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+exp = np.array([1,2,3,4,5,6])
+print(exp[1:5:2])
+    </code>
+    </deckgo-highlight-code>
+
+       <div class="output">
+       <p><span>Output :</span></p>
+       </div>
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <deckgo-slide-title>
+        
+        
+        <h1 slot="title">Output</h1>
+            <code slot="code">
+[2 4]
+        </code>
+        </deckgo-slide-title>
+    </deckgo-highlight-code>
+
+        <p>
+            <span>Slicing 2-D NumPy arrays:</span><br>
+            Now, a 2-D array has rows and columns so it can get a
+            little tricky to slice 2-D arrays. But once you understand
+            it, you can slice any dimension array!.
+        </p>
+
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+exp = np.array([[1,2,3],
+[4,5,6]])
+print(exp[0,0])
+print(exp[1,2])
+print(exp[1,0])
+    </code>
+    </deckgo-highlight-code>
+
+       <div class="output">
+       <p><span>Output :</span></p>
+       </div>
+        
+        
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <deckgo-slide-title>
+        
+        
+        
+        <h1 slot="title">Output</h1>
+            <code slot="code">
+1
+6
+4
+        </code>
+        </deckgo-slide-title>
+    </deckgo-highlight-code>
+
+        <p>
+            <span>Statistical Functions in Python</span><br>
+            <span>NumPy</span> has quite a few useful statistical functions for finding minimum, maximum,
+            percentile standard deviation and variance, etc from the
+            given elements in the array.<br>
+
+            - we will see a few of them here:
+        </p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+import numpy as np
+normal_array = np.random.normal(5, 0.5, 10)
+
+### Min
+print(np.min(normal_array))
+
+### Max
+print(np.max(normal_array))
+
+### Mean
+print(np.mean(normal_array))
+
+### Median
+print(np.median(normal_array))
+
+### Sd
+print(np.std(normal_array))
+    </code>
+    </deckgo-highlight-code>
+
+
+               <div class="output">
+       <p><span>Output :</span></p>
+       </div>
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <deckgo-slide-title>
+        
+        <h1 slot="title">Output</h1>
+            <code slot="code">
+4.467042435266913
+5.612113171990201
+4.934841002270593
+4.846995625786663
+0.3875019367395316
+        </code>
+        </deckgo-slide-title>
+    </deckgo-highlight-code>
+
+            <h3>Viewing the data</h3>
+                        <img class="gif" src="../../../static/blog/about-cover/Numpy/GIF-Numpy/Data%20analysis%20(1).gif"/>
+        <p>
+            Using what we've learned about indexing, we can start by
+            separating the column labels from the rest of the data.
+        </p>
+
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+header = data[0,:]   # create a new NumPy array containing the column labels
+data = data[1:,:]   # remove the header from the rest of the data
+
+print('Header:\n',header, '\n\nFirst two rows:\n', data[:2,:])
+
+    </code>
+    </deckgo-highlight-code>
+
+               <div class="output">
+       <p><span>Output :</span></p>
+       </div>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <deckgo-slide-title>
+        <h1 slot="title">Output</h1>
+            <code slot="code">
+Header:
+ ['Place' 'Dir' 'Value' 'House' 'hood' 'owner']
+
+First two rows:
+ [['Ouedjdida' '197542' '987621.69' '1'
+  'Ancien mediouna House  , 'All'
+  'Kafida mahmoudan']
+ ['Ouedjdida' '284675' '319764.214' '1'
+ 'Ancien mediouna House  , 'All'
+  'Kafida mahmoudan']]
+
+        </code>
+        </deckgo-slide-title>
+    </deckgo-highlight-code>
+
+        <h3>Extracting data</h3>
+                        <img class="gif" src="../../../static/blog/about-cover/Numpy/GIF-Numpy/Statistics.gif"/>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+hood_owner = (data[:,4] == 'Electricity Net Generation From Wind, All Sectors')
+print(hood_owner)
+    </code>
+    </deckgo-highlight-code>
+
+       <div class="output">
+       <p><span>Output :</span></p>
+       </div>
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <deckgo-slide-title>
+        <h1 slot="title">Output</h1>
+            <code slot="code">
+array([False, False, False, ..., False, False, False])
+        </code>
+        </deckgo-slide-title>
+    </deckgo-highlight-code>
+
+        <p>
+            So the output is say that he get all rows where column four equals
+        </p>
+
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+array([['WYETPUS', '194913', 'Not Available', '12',
+        'Electricity Net Generation From Wind, All Sectors',
+        'Million Kilowatthours'],
+       ['WYETPUS', '195013', 'Not Available', '12',
+        'Electricity Net Generation From Wind, All Sectors',
+        'Million Kilowatthours'],
+       ['WYETPUS', '195113', 'Not Available', '12',
+        'Electricity Net Generation From Wind, All Sectors',
+        'Million Kilowatthours'],
+       ...,
+       ['WYETPUS', '202009', '23176.032', '12',
+        'Electricity Net Generation From Wind, All Sectors',
+        'Million Kilowatthours'],
+       ['WYETPUS', '202010', '29418.649', '12',
+        'Electricity Net Generation From Wind, All Sectors',
+        'Million Kilowatthours'],
+       ['WYETPUS', '202011', '33848.129', '12',
+        'Electricity Net Generation From Wind, All Sectors',
+        'Million Kilowatthours']], dtype='&lt;U80')
+    </code>
+    </deckgo-highlight-code>
+
+         <h3><span>+</span>Source :</h3>
+         <p><span>- </span><a href="https://numpy.org/doc/">Numpy Docs</a></p>
+         <p><span>- </span><a href="https://devdocs.io/numpy~1.14/">DevDocs</a></p>
+         <p><span>- </span><a href="https://www.kite.com/python/docs/numpy">Kite Docs</a></p>
+
+
+        <h3><span>+</span> Conclusion:</h3>
+      <p>
+         This article has provided you with an overview of <span>NumPy's</span> capabilities.
+          You should now be ready to start using NumPy in your projects. Be sure to
+        refer to the documentation <a href="https://numpy.org/doc/">Numpy</a>
+      </p>
+
+
+
+
+    </div>
+</section>
+{% endblock %}
+<!--Articl End-->
+
+
+<!--Footer Start-->
+{% block footer %}
+<footer>
+          <div class="footer" id="footer"  style="display: none">
+                <div class="footer-content">
+                <h3>Doflamingo</h3>
+                <p>Get to know us her on social media if you have any questions or just want to visit, anyway</p>
+                    <ul class="socials">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                    </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>copyright &copy;2021 Doflamingo. designed by <span>Me</span></p>
+            </div>
+          </div>
+    </footer>
+{% endblock %}
+<!--Footer End-->
+
+

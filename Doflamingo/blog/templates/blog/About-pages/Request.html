@@ -1,0 +1,345 @@
+{% extends "blog/Base/About.html" %}
+{% load static %}
+{% block title %}
+    Request
+{% endblock %}
+
+
+
+
+<!--Cover Start-->
+{% block cover %}
+{% include 'blog/Loader/Loader.html' %}
+<link rel="stylesheet" href="{% static 'blog/css/about/request.css' %}"/>
+<script type="text/javascript">
+        document.addEventListener("mousemove", parallax);
+        function parallax(e){
+          document.querySelectorAll(".btn-django").forEach(function(move){
+            var moving_value = move.getAttribute("data-value");
+            var x = (e.clientX * moving_value)/100;
+            var y = (e.clientY * moving_value)/300;
+
+        move.style.transform = "translateX(" + x + "px) translateY(" + y + "px)";
+
+    });
+    }
+</script>
+<section class="banner request" id="header">
+    <div class="container">
+        <div id="scene">
+            <div class="layer"><img src="../../../static/blog/about-cover/Request/Background.png"/></div>
+            <div class="layer" data-depth-y="2"><img src="../../../static/blog/about-cover/Request/Moon.png"/></div>
+            <div class="layer" data-depth="0"><img src="../../../static/blog/about-cover/Request/Back-mountain.png"/></div>
+            <div class="layer" data-depth-y="1"><img src="../../../static/blog/about-cover/Request/Request-text.png"/></div>
+            <div class="layer" data-depth="0"><img src="../../../static/blog/about-cover/Request/Gora.png"/></div>
+            <div class="layer" data-depth-x="0.1"><img src="../../../static/blog/about-cover/Request/Snake.png"/></div>
+            <div class="layer" data-depth-y="-1"><img src="../../../static/blog/about-cover/Request/Request.png"/></div>
+            <div class="layer" data-depth-x="-0.2"><img src="../../../static/blog/about-cover/Request/Man.png"/></div>
+            <div class="layer" data-depth="0"><img src="../../../static/blog/about-cover/Request/Fog.png"/></div>
+            <div class="layer" data-depth="0.2"><img src="../../../static/blog/about-cover/Request/Sparks.png"/></div>
+
+
+        </div>
+    </div>
+       <a href="#container"  class="scroll-down" onclick="TestsFunction()"></a>
+        <div class="btn-request" data-value="4">
+            <a href="#container" onclick="TestsFunction()"><span>Explore</span></a>
+        </div>
+</section>
+{% endblock %}
+<!--Cover End-->
+
+<!--Article Start-->
+{% block article %}
+<section class="article article-request" id="article">
+    <div class="request-container"  id='container' style="display: none" >
+
+        <h1 data-aos="flip-down">blow up your knowledge in <span>request</span> library</h1>
+            <img class="header" src="../../../static/blog/about-cover/Request/GIF-Request/Cover-request.gif"/>
+
+
+            <h3>What is <span>Request</span> library ?</h3>
+        <div class="introduction">
+             <div class="left">
+                   <img id="first" src="../../../static/blog/about-cover/Request/GIF-Request/Header-request.gif"/>
+                </div>
+
+            <div class="right">
+                <p>
+                    In this article on Python Requests Guide, I will explain to you all the basics of Requests Module and how you can send HTTP/1.1 requests using Python.
+                    in the end you will be able to use web scraping using Python
+
+                   Requests is a Python module that you can use to send all kinds of HTTP requests. It is an easy-to-use library with a lot of features so for
+                   you to play with web, Python Requests is must. Whether it be hitting APIs, downloading entire facebook pages, and much more cool stuff, one
+                   will have to make a request to the URL.
+                </p>
+            </div>
+        </div>
+
+
+
+        <h3>Why you should know about <span>Request</span> ?</h3>
+
+    <p>
+        It is the most powerful tool of Python that allows us to send requests on the web. It includes many features
+        and methods to send HTTP requests. The system that sends requests is known as the client, and the system that
+        holds the webserver is known as a serve
+    </p>
+
+        <img class="logo" src="../../../static/blog/about-cover/Request/GIF-Request/requests-lib.png"/>
+
+
+        <h3>Installing <span>Requests</span></h3>
+    <p>Let’s begin by installing the requests library. To do so, run the following command:</p>
+
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+pip install requests
+    </code>
+    </deckgo-highlight-code>
+
+        <p>We can also use the <span>Pipenv</span> (Python packaging tool) to install the request module. Type the following command.</p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+pipenv install requests
+    </code>
+    </deckgo-highlight-code>
+
+        <h3>How to Make a <span>GET</span> Request?</h3>
+
+            <img class="gif" src="../../../static/blog/about-cover/Request/GIF-Request/Asset selection.gif"/>
+
+        <p>One of the most common <span>HTTP</span> methods is <span>GET</span> <br>
+           GET method is used to retrieve information from the given server using a given URI. <br>
+           The GET method sends the encoded user information appended to the page request.<br>
+           In other words, it is used to send a request to a URL. To invoke the GET request, we use the following syntax.
+        </p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+import requests
+
+# Create a GET request
+git_requests = requests.get('https://api.github.com/users/doflamingo')
+
+# check the status for the output received
+print(git_requests)
+
+# print content of request
+print(git_requests.content)
+    </code>
+    </deckgo-highlight-code>
+
+        <p>
+            and voila you made your first request<br>
+            For more, <a href="https://docs.python-requests.org/en/latest/api/#requests.Session.get">visit GET method – Python requests</a><br>
+            Let’s dive a little deeper into the response of that request.
+        </p>
+
+
+        <h3><span>-</span> Response</h3>
+              <img class="gif" src="../../../static/blog/about-cover/Request/GIF-Request/In%20no%20time.gif"/>
+        <p>A Response is a powerful object for examine the results of the request with lots of functions and attributes that assist in normalizing data or creating ideal portions of code.<br>
+           Response object can be used to imply lots of features, methods, and functionalities.
+        </p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+import requests
+
+# Create a get request
+response = requests.get('https://api.github.com/')
+
+# show request object
+print(response.url)
+
+# show status code
+# We will delve into it in the next section
+print(response.status_code)
+    </code>
+    </deckgo-highlight-code>
+
+        <p>For more response method <a href="https://docs.python-requests.org/en/latest/api/#main-interface">visit Developer Interface</a><br></p>
+
+        <h3><span>-</span> Status Codes</h3>
+            <img class="gif" src="../../../static/blog/about-cover/Request/GIF-Request/Static website.gif"/>
+
+        <p>Status code is a response that we get after making the GET or POST request. A status code informs us of the status of the request.<br>
+            For example, a 200 OK status means that your request was successful, whereas a 404 NOT FOUND status means that the resource you were looking for was not found.<br>
+            There are a lot of them, get to know them <a href="https://en.wikipedia.org/wiki/List_of_HTTP_status_codes"></a>
+        </p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+# Integer Code of responded HTTP Status, e.g. 404 or 200.
+response.status_code
+    </code>
+    </deckgo-highlight-code>
+
+        <p>We can also use this information to make the decision in our code.</p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+if response.status_code == 200:
+    print('Success!')
+elif response.status_code == 404:
+    print('Not Found.')
+    </code>
+    </deckgo-highlight-code>
+
+
+        <h3><span>- </span>Request Headers</h3>
+            <img class="gif" src="../../../static/blog/about-cover/Request/GIF-Request/Placeholder.gif"/>
+
+        <p>
+            HTTP headers let the client and the server pass additional information with an HTTP request or response.
+            All the headers are case-insensitive.<br>
+            To customize headers, simply pass them in a dict to the headers parameter. Similarly, you can also send
+            your own cookies to a server using a dict passed to the cookies parameter.</p>
+
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+#imposrting requests librarie
+import requests
+
+#make a url
+url = 'http://some-domain.com/set/cookies/headers'
+
+#pass them to the dictionnary
+headers = {'user-agent': 'your-own-user-agent/0.0.1'}
+
+#get the request
+request = requests.get(url, headers=headers)
+    </code>
+    </deckgo-highlight-code>
+
+        <h3><span>-</span> Authentication using Python <span>Requests</span></h3>
+            <img class="gif" src="../../../static/blog/about-cover/Request/GIF-Request/Cyber attack.gif"/>
+
+        <p>Authentication refers to giving a user permissions to access a particular resource. like helps a service understand who you are.<br>
+            All the request functions you’ve seen to this point provide a parameter called auth, which allows you to pass your credentials,
+            so To achieve this authentication, typically one provides authentication data through Authorization header or a custom header defined by server.</p>
+
+
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+# import requests module
+import requests
+# import HTTPBasicAuth from requests.auth (request authentication)
+from requests.auth import HTTPBasicAuth
+
+# craete a get request
+# Replace “user” and “pass” with your username and password.
+response = requests.get('https://api.github.com / user, ',
+            auth = HTTPBasicAuth('user', 'pass'))
+
+# show request object
+print(response)
+    </code>
+    </deckgo-highlight-code>
+
+        <p>It will authenticate the request and return a response <span>200</span><br>
+            or error <span>403</span>.</p>
+
+        <p><span>Another example :</span></p>
+
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+#import getpass
+from getpass import getpass
+
+#make a request
+requests.get('https://api.github.com/user', auth=('username', getpass()))
+
+#the response :
+>>> Response : [200]
+    </code>
+    </deckgo-highlight-code>
+
+        <p>The request succeeded if the credentials you passed in the tuple to auth are valid. <br>
+            if you try it without a credentials, you’ll will get that the status code</p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+#make a request
+>>> requests.get('https://api.github.com/user')
+
+#the response :
+>>> Response : [401]
+    </code>
+    </deckgo-highlight-code>
+
+        <h3><span>-</span> Session</h3>
+            <img class="gif" src="../../../static/blog/about-cover/Request/GIF-Request/Private data.gif"/>
+        <p>The Session object allows you to persist certain parameters across requests.<br>
+            like Sometimes it is useful to preserve certain parameters across multiple requests. The Session object does exactly that.<br>
+            The Session object uses urllib3’s connection pooling. This means that the underlying TCP connection will be reused for all
+            the requests made to the same host.</p>
+
+<deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+#make a session
+session = requests.Session()
+
+#make a get request
+session.get('https://httpbin.org/cookies/set/sessioncookie/151471515')
+request = session.get('https://httpbin.org/cookies')
+
+#check the set
+print(request.text)
+>>> {"cookies": {"sessioncookie": "151471515"}}
+    </code>
+    </deckgo-highlight-code>
+
+
+        <h3><span>+</span> Sources</h3>
+        <p><a href="https://docs.python-requests.org/en/latest/api/#module-requests">Developer Interface</a></p>
+        <p><a href="https://docs.python-requests.org/en/latest/user/quickstart/#quickstart">Request docs</a></p>
+        <p><a href="https://www.w3resource.com/python-exercises/requests/index.php">Request Projects</a></p>
+
+
+        <h3><span>+</span> Conclusion</h3>
+        <p>Now you can make basic requests to a server by passing specific headers, cookies, or query strings.
+        This will be very handy when you are trying to scrape some webpages for information
+        after that I am pretty sure you want to know more about Python so here's our other libraries articles in web-app/scrapping ...</p>
+
+        <p>- <a href="{% url 'beautifullsoup' %}">beautifullsoup</a></p><br>
+        <p>- <a href="{% url 'flask' %}">flask</a></p><br>
+        <p>- <a href="{% url 'django' %}">django</a></p>
+
+
+
+
+    </div>
+
+</section>
+{% endblock %}
+<!--Article End-->
+
+<!--Footer Start-->
+{% block footer %}
+<footer>
+          <div class="footer" id="footer"  style="display: none">
+                <div class="footer-content">
+                <h3>Doflamingo</h3>
+                <p>Get to know us her on social media if you have any questions or just want to visit, anyway</p>
+                    <ul class="socials">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                    </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>copyright &copy;2021 Doflamingo. designed by <span>Me</span></p>
+            </div>
+          </div>
+    </footer>
+{% endblock %}
+<!--Footer End-->

@@ -1,0 +1,382 @@
+{% extends "blog/Base/About.html" %}
+{% load static %}
+{% block title %}
+    Flask
+{% endblock %}
+
+
+<!--Preloade End-->
+
+<!--Preloade End-->
+
+<!--Cover Start-->
+{% block cover %}
+{% include 'blog/Loader/Loader.html' %}
+<link rel="stylesheet" href="{% static 'blog/css/about/flask.css' %}">
+<script type="text/javascript">
+        document.addEventListener("mousemove", parallax);
+        function parallax(e){
+          document.querySelectorAll(".btn-flask").forEach(function(move){
+            var moving_value = move.getAttribute("data-value");
+            var x = (e.clientX * moving_value)/100;
+            var y = (e.clientY * moving_value)/150;
+
+        move.style.transform = "translateX(" + x + "px) translateY(" + y + "px)";
+
+    });
+    }
+</script>
+<section class="banner flask">
+    <div class="container">
+        <div id="scene">
+            <div class="layer" data-depth="0"><img src="../../../static/blog/about-cover/Flask/Sky.png"/></div>
+            <div class="layer none" data-depth-y="2"><img src="../../../static/blog/about-cover/Flask/Flask.png"/></div>
+            <div class="layer" data-depth="0"><img src="../../../static/blog/about-cover/Flask/Mountain.png"/></div>
+            <div class="layer" data-depth="0"><img src="../../../static/blog/about-cover/Flask/Water.png"/></div>
+            <div class="layer" data-depth="0"><img src="../../../static/blog/about-cover/Flask/Mountain-fog.png"/></div>
+            <div class="layer" data-depth-y="-0.2"><img src="../../../static/blog/about-cover/Flask/Jully.png"/></div>
+            <div class="layer" data-depth-y="-0.10"><img src="../../../static/blog/about-cover/Flask/Jellys.png"/></div>
+            <div class="layer" data-depth-x="0.1"><img src="../../../static/blog/about-cover/Flask/Lanterns.png"/></div>
+            <div class="layer" data-depth-x="0.1"><img src="../../../static/blog/about-cover/Flask/Man-in%20boat.png"/></div>
+            <div class="layer" data-depth="0"><img src="../../../static/blog/about-cover/Flask/Fog.png"/></div>
+            <div class="layer" data-depth="0.5"><img src="../../../static/blog/about-cover/Flask/Sparks.png"/></div>
+        </div>
+    </div>
+    <img class="banner-logo" src="../../../static/blog/about-cover/Flask/GIF-Flask/flask-logo-res.png"/>
+    <a href="#container"  class="scroll-down" onclick="TestsFunction()"></a>
+        <div class="btn-flask" data-value="4" data-aos="fade-down">
+            <a href="#article" onclick="TestsFunction()"><span>Explore</span></a>
+        </div>
+</section>
+{% endblock %}
+<!--Cover End-->
+
+<!--Article Start-->
+{% block article %}
+<section class="article article-flask" id="article">
+   <div class="flask-container"  id='container' style="display: none" >
+
+    <h1 data-aos="flip-down" data-aos-delay="15">Let's pave your way to build your mini web app with flask</h1>
+       <img class="cover" src="../../../static/blog/about-cover/Flask/GIF-Flask/Flask-gif-1.gif">
+
+       <h3 id="w-flask"><span></span>What Is Flask ?</h3>
+    <p>
+      -Flask is a web development framework. It is a framework with a built-in development server and a debugger.
+      -Flask framework in itself is different from the other archetypes as it allows web developers to be flexible and to comfortably accommodate the frequently released changes in the software development community.
+    </p>
+
+        <img class="logo" src="../../../static/blog/about-cover/Flask/GIF-Flask/flask-lib.png">
+
+       <h3 id="step-1"><span>Step 1:</span> Install Python</h3>
+    <p>-Check whether you have installed Python 3 or not. If not, then download Python 3 from here and install it as per your Operating System.</p>
+
+       
+        <h3 id="step-2"><span>Step 2:</span> Create a Python Virtual Environment</h3>
+    <p>-Create a virtual environment using the below command.</p>
+
+
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+    <code slot="code">
+python3 -m venv venv
+    </code>
+    </deckgo-highlight-code>
+
+
+        <h3 id="step-3"><span>Step 3:</span> Flask Download And Insallt</h3>
+    <p>-We need to perform the Flask download steps and install Flask using the below-mentioned steps.</p>
+
+
+
+        <h3 id="install-flask"><span>1-</span> Now install Flask.</h3>
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+        <code slot="code">
+pip install flask
+        </code>
+    </deckgo-highlight-code>
+
+    <p>-After completing the installation of the package, let’s get our hands on the code.</p>
+    <p>Let’s write a minmal app that will give you a good basic structure for writing larger applications.</p>
+
+          <h3 id="flask-app"><span>2-</span> Flask app</h3>
+
+       <deckgo-deck>
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+        <code slot="code">
+# Importing flask module in the project is mandatory
+# An object of Flask class is our WSGI application.
+from flask import Flask
+
+# Flask constructor takes the name of
+# current module (__name__) as argument.
+app = Flask(__name__)
+
+# The route() function of the Flask class is a decorator,
+# which tells the application which URL should call
+# the associated function.
+@app.route('/')
+# ‘/’ URL is bound with bella_choa() function.
+def bella_choa():
+    return 'Bella Chao'
+
+# main driver function
+if __name__ == '__main__':
+
+    # run() method of Flask class runs the application
+    # on the local development server.
+    app.run()
+        </code>
+    </deckgo-highlight-code>
+           </deckgo-deck>
+
+
+          <h3 id="analyzing"><span>-</span> Analyzing the code:</h3>
+       <img class="gif" src="../../../static/blog/about-cover/Flask/GIF-Flask/Business analytics.gif">
+
+    <p>-we import the class.<br>
+        -create an instance, the variable __name__ passed to the Flask class is a predefined&nbsp;variable Python which is set on the name of the module in which it is used.
+           <br>-the routes file that will manage the routing of the web app is imported.
+    </p>
+
+    <h3 id="rooting"><span>-</span> Routing</h3>
+      <img class="gif" src="../../../static/blog/about-cover/Flask/GIF-Flask/Memory%20storage.gif">
+
+
+    <p>Routing in Flask is managed by the decorator @app.route(), who creates an association between the URL provided as an argument and the function. In this example, there are two decorators who associate the URLs “/” and “/contacts” with the functions home() and contacts(). When a web browser requests one of these two URLs, Flask will invoke the underlying function and return the value returned to the browser as a response.</p>
+
+    <deckgo-deck>
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+        <code slot="code">
+from app import app
+
+@app.route("/")
+def home():
+    return "bella choa"
+
+@app.route("/contacts")
+def contacts():
+    return "My email is example@gmail.com"
+        </code>
+    </deckgo-highlight-code>
+        </deckgo-deck>
+
+
+    <p>You can do more! You can make parts of the URL dynamic and attach multiple rules to a function.</p>
+
+    <h3 id="variable"><span>-</span> Variable Rules</h3>
+        <img class="gif" src="../../../static/blog/about-cover/Flask/GIF-Flask/Teacher.gif">
+
+
+    <p>It is possible to build a URL dynamically, by adding variable parts to the rule parameter. This variable part is marked as  &lt;variable-name>. It is passed as a keyword argument to the function with which the rule is associated.</p>
+   <deckgo-deck>
+    <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+        <code slot="code">
+from flask import Flask
+app = Flask(__name__)
+
+@app.route('/bella/&lt;name>')
+def bella_name(name):
+   return 'Bella choa %s!' % name
+
+if __name__ == '__main__':
+   app.run(debug = True)
+       </code>
+    </deckgo-highlight-code>
+        </deckgo-deck>
+
+
+    <p>In the following example, the rule parameter of route() decorator contains &gt;name> variable part attached to URL '/bella'. Hence, if the http://localhost:5000/bella/Doflamingo is entered as a URL in the browser, ‘TutorialPoint’ will be supplied to bella() function as argument.</p>
+
+       <h3 id="render"><span>-</span> Rendering templates</h3>
+          <img class="gif" src="../../../static/blog/about-cover/Flask/GIF-Flask/Online%20report.gif">
+
+
+    <p>It is possible to return the output of a function bound to a certain URL in the form of HTML. For instance, in the following script, hello() function will render ‘Hello World’ with &lt;h1> tag attached to it.</p>
+
+   <deckgo-deck>
+      <deckgo-highlight-code language="python" style="text-transform: lowercase; ">
+          <code slot="code">
+@app.route("/")
+def home():
+  return render_template("index.html")
+         </code>
+      </deckgo-highlight-code>
+          </deckgo-deck>
+
+       <p><span>Template :</span></p>
+
+   <deckgo-deck>
+   <deckgo-highlight-code language="html" style="text-transform: lowercase; ">
+          <code slot="code">
+<!doctype html>
+&lt;html>
+    &lt;head>
+        &lt;title>Home page&lt;/title>
+    &lt;/head>
+    &lt;body>
+        &lt;h1>Home Page!&lt;/h1>
+    &lt;/body>
+&lt;/html>
+         </code>
+   </deckgo-highlight-code>
+       </deckgo-deck>
+
+
+       <p>The render_template function will look in the "templates" folder for a file called "index.html" and render it to the screen. </p>
+       <p>Flask will look for templates in the templates folder. So if your application is a module, this folder is next to that module</p>
+    <deckgo-deck class="code">
+    <deckgo-highlight-code language="python" style="text-transform: lowercase;">
+          <code slot="code">
+/application.py
+  /templates
+     /hello.html
+         </code>
+   </deckgo-highlight-code>
+       </deckgo-deck>
+
+
+   <deckgo-highlight-code language="python" style="text-transform: lowercase;">
+          <code slot="code">
+/application
+  /__init__.py
+  /templates
+     /hello.html
+         </code>
+   </deckgo-highlight-code>
+       </deckgo-deck>
+
+
+       <p>For templates you can use the full power of Jinja2 templates</p>
+       <p>The jinja2 template engine uses the following delimiters for escaping from HTML.</p>
+       <p>Jinja also allows you to write python code inside your html files. It also allows you to pass information from your back-end (the python script) to your HTML files.</p>
+
+
+   <deckgo-highlight-code language="python" style="text-transform: lowercase;">
+          <code slot="code">
+@app.route("/&ltname>")
+def welcome(name):
+   return render_template("welcome.html", name=name)
+         </code>
+   </deckgo-highlight-code>
+       </deckgo-deck>
+
+       <p><span>Jinja Templates :</span></p>
+
+   <deckgo-highlight-code language="html" style="text-transform: lowercase;">
+          <code slot="code">
+ &lt!DOCTYPE html>
+ &lthtml>
+
+ &lthead>
+     &lttitle>Doflamingo&lt/title>
+ &lt/head>
+
+ &ltbody>
+     &lth2>Welcome To DFG&lt/h2>
+     &lth3>Welcome, &lbrace;{name}}&lt/h3>
+ &lt/body>
+
+ &lt/html>
+         </code>
+   </deckgo-highlight-code>
+       </deckgo-deck>
+
+       <h3 id="http"><span>-</span> Http methos</h3>
+       <img class="gif" src="../../../static/blog/about-cover/Flask/GIF-Flask/Binary%20code.gif">
+
+   <p>HTTP is the hypertext transfer protocol which is considered as the foundation of the data transfer in the world wide web. All web frameworks including flask need to provide several HTTP methods for data communication.</p>
+
+    <deckgo-highlight-code language="python" style="text-transform: lowercase;">
+          <code slot="code">
+from flask import request
+
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        return login()
+    else:
+    return login_form()
+         </code>
+   </deckgo-highlight-code>
+       </deckgo-deck>
+
+   <p><span>GET</span> It is the most common method which can be used to send data in the unencrypted form to the server.</p>
+   <p><span>POST</span> It is used to send the form data to the server. The server does not cache the data transmitted using the post method.</p>
+
+
+       <h3 id="static"><span>- </span>Static Files</h3>
+             <img class="gif" src="../../../static/blog/about-cover/Flask/GIF-Flask/Data%20analysis.gif">
+
+
+   <p>The static files such as CSS or JavaScript file enhance the display of an HTML web page<br>
+       Just create a folder called static in your package or next to your module and it will be available at <span>/static</span> on the application.</p>
+
+   <deckgo-highlight-code language="python" style="text-transform: lowercase;">
+          <code slot="code">
+   url_for('static', filename='style.css')
+         </code>
+   </deckgo-highlight-code>
+       </deckgo-deck>
+
+
+       <p><span>Example :</span></p>
+
+   <deckgo-highlight-code language="python" style="text-transform: lowercase;">
+          <code slot="code">
+&lt;html>
+&lt;head>
+    &lt;title>Message&lt;/title>
+    &lt;link rel="stylesheet" href="&lbrace;{ url_for('static', filename='css/style.css') }}">
+&lt;/head>
+
+&lt;body>
+          &lt;h1>hi, welcome at Doflamingo&lt;/h1>
+&lt;/body>
+&lt;/html>
+         </code>
+   </deckgo-highlight-code>
+       </deckgo-deck>
+
+
+         <h3><span>+</span>Source :</h3>
+         <p><span>- </span><a href="https://flask.palletsprojects.com/en/2.0.x/">Flask Docs</a></p>
+         <p><span>- </span><a href="https://readthedocs.org/projects/flask/">read docs</a></p>
+         <p><span>- </span><a href="https://pypi.org/project/Flask-Docs/">Pip flask</a></p>
+
+       <h3><span>+ </span>Conclusion :</h3>
+       <p><span>Flask</span> comes with some standard functionalities and allows developers to
+           add any number of libraries or plugins for an extension. If you have a simple, innovative
+           use case to be added to an existing application, Flask should be your choice as it offers
+           <span>flexibility</span>.</p>
+
+
+
+
+
+   </div>
+</section>
+{% endblock %}
+<!--Article End-->
+
+<!--Footer Start-->
+{% block footer %}
+<footer>
+          <div class="footer" id="footer"  style="display: none">
+                <div class="footer-content">
+                <h3>Doflamingo</h3>
+                <p>Get to know us her on social media if you have any questions or just want to visit, anyway</p>
+                    <ul class="socials">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                    </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>copyright &copy;2021 Doflamingo. designed by <span>Me</span></p>
+            </div>
+          </div>
+    </footer>
+{% endblock %}
+<!--Footer End-->

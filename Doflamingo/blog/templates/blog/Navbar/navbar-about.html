@@ -1,0 +1,17 @@
+{% load static %}
+ <div class="scroll-up-btn">
+        <i class="fas fa-angle-up"></i>
+    </div>
+    <nav class="navbar">
+        <div class="max-width">
+            <div class="logo"><a href="{% url 'home' %}">Do<span>Flamin</span>Go</a></div>
+            <ul class="menu">
+                <li><a href="{% url 'home' %}#home" class="menu-btn">Home</a></li>
+                <li><a href="{% url 'home' %}#librarie" class="menu-btn">Project</a></li>
+                <li><a href="{% url 'home' %}#about" class="menu-btn">About</a></li>
+            </ul>
+            <div class="menu-btn" >
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>

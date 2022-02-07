@@ -1,0 +1,746 @@
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  background-color:#1c4c4f;
+}
+
+/* navbar styling */
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+::-webkit-scrollbar{
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(transparent, #25a8b0);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: linear-gradient(transparent, #ffde67);
+}
+
+
+.navbar{
+    position: fixed;
+    display: block;
+    width: 100%;
+    z-index: 1100;
+    padding: 30px 0;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.navbar.sticky{
+    padding: 15px 0;
+    background: #ffffff;
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo a{
+    color: #ffd800;
+    font-size: 35px;
+    font-weight: 600;
+}
+.navbar .logo a span{
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+.navbar.sticky .logo a span{
+    color: #000000;
+}
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar .menu li a{
+    display: block;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+}
+.navbar.sticky .menu li a{
+    color: #ffd800;
+}
+.navbar .menu li a:hover{
+    color: #d3b046;
+}
+.navbar.sticky .menu li a:hover{
+    color: #ffc100;
+}
+/* menu btn styling */
+.menu-btn{
+    color: #ffefb0;
+    font-size: 23px;
+    display: none;
+}
+
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: #ffc100;
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 1100;
+    font-size: 30px;
+    border-radius: 6px;
+    border-bottom-width: 2px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.scroll-up-btn.show{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+.scroll-up-btn:hover{
+    filter: brightness(90%);
+}
+
+/* Navbar End */
+
+
+/* Navbar End */
+
+
+/* Article-matplotib Start */
+.article-matplotib{
+    position: relative;
+    background: #ffffff;
+
+}
+
+.matplotib .banner-logo{
+    display: none;
+    margin: 0 auto;
+    padding: 0;
+    align-items: center;
+    z-index: 100
+}
+
+
+.matplotib-container {
+    padding: 80px 30px 20px 30px;
+}
+
+
+.matplotib-container h1{
+    position: relative;
+    padding: 0 0 45px 0;
+    font-size: 6em;
+    margin-left: 70px;
+    font-weight: 600;
+    text-align: center;
+}
+.matplotib-container h1 span{
+        color: #ffdd33 ;
+}
+
+.matplotib-container p{
+    position: relative;
+    font-size: 2rem;
+    max-width: 100%;
+    padding: 0 370px 25px 0;
+    margin-left: 250px;
+
+}
+
+.matplotib-container p span{
+    color: #ffdd33 ;
+    font-weight: 900 ;
+}
+
+.matplotib-container p a{
+    color: #bba700;
+    font-weight: 500 ;
+}
+
+.matplotib-container p a:hover{
+    color: #ffdd33;
+}
+
+.matplotib-container h3{
+    margin-left: 150px;
+    font-size: 3.7rem;
+    padding: 12px;
+}
+
+.matplotib-container h3 span{
+    color: #ffdd33;
+}
+
+.matplotib-container .logo{
+    position: relative;
+    display: block;
+    left: 20%;
+    max-width: 50%;
+}
+
+.matplotib-container .cover{
+    position: relative;
+    align-items: center;
+}
+
+.matplotib-container .img-big{
+    max-width: 50%;
+}
+
+
+.matplotib-container .row{
+    display: flex;
+    flex:0 0 auto;
+    margin: auto;
+    padding: 0;
+    align-items: center;
+    margin-left: 5%;
+}
+
+.matplotib-container .row .left img{
+    float: left;
+    clear: left;
+    max-width: 50em;
+    flex: 0 0 50em;
+    padding: 0 0 0 160px;
+
+}
+
+
+.matplotib-container .row .right p{
+    float: right;
+    clear: right;
+    position: relative;
+    text-align: justify;
+    padding: 0 250px 0 0;
+    margin: 0 auto;
+
+}
+
+
+.matplotib-container .image{
+        position: relative;
+        align-items: center;
+        display: block;
+        margin: 0 auto;
+}
+.matplotib-container .image:before{
+        content: '';
+        position: absolute;
+        bottom: -15%;
+        Left: 5%;
+        width: 90%;
+        height: 90%;
+        background: rgba(0,0,0,0.3);
+        z-index: -1;
+        filter: blur(10px);
+}
+
+.matplotib-container p,
+.matplotib-container h1{
+    color: #000000;
+}
+
+.matplotib::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to top, rgb(255, 255, 255), transparent);
+    z-index: 1000;
+}
+/* Article-matplotib End */
+
+/*matplotib button Start*/
+.btn-matplotib
+{
+    display: flex;
+    margin-top: 180px;
+    margin-right: 50px;
+    flex-wrap: wrap;
+}
+.btn-matplotib a {
+    position: relative;
+    display: inline-block;
+    padding: 9px 28px;
+    border: 2px solid #ffe691;
+    margin: 40px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    Letter-spacing: 2px;
+    color: #fff;
+    -webkit-box-reflect: below 0px linear-gradient(transparent, #0002);
+    transition: 0.5s;
+    transition-delay: 0s;
+
+}
+
+.btn-matplotib a span{
+    position: relative;
+    z-index: 100;
+    font-size: 20px;
+}
+
+.btn-matplotib a:hover
+{
+    transition-delay: 1.5s;
+    color: #ffffff;
+    box-shadow: 0 0 10px #ffe691,
+                0 0 20px #ffe691,
+                0 0 40px #ffe691,
+                0 0 80px #ffe691 ,
+                0 0 160px #ffe691;
+
+}
+.btn-matplotib a:nth-child(2)
+{
+    filter: hue-rotate(80deg);
+}
+.btn-matplotib a::before {
+    content: '';
+    position: absolute;
+    Left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 2px;
+    background: #ffe691;
+    box-shadow: 5px -8px 0 #ffe691,
+                5px 8px 0 #ffe691;
+    transition: width 0.5s, left 0.5s, height 0.5s,
+    box-shadow 0.5s;
+    transition-delay: 1s,0.5s,0s,0s;
+}
+.btn-matplotib a:hover::before{
+    width: 60%;
+    height: 110%;
+    Left: -2px;
+    box-shadow: 5px 0 0 #ffe691,
+                5px 0 0 #ffe691;
+    transition-delay: 0s,0.5s,1s,1s;
+}
+
+.btn-matplotib a::after {
+    content: '';
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 2px;
+    background: #ffe691;
+    box-shadow: -5px -8px 0 #ffe691,
+                -5px 8px 0 #ffe691;
+    transition: width 0.5s, left 0.5s, height 0.5s,
+    box-shadow 0.5s;
+    transition-delay: 1s,0.5s,0s,0s;
+}
+.btn-matplotib a:hover::after{
+    width: 60%;
+    height: 110%;
+    right: -2px;
+
+    box-shadow: -5px 0 0 #ffe691,
+                -5px 0 0 #ffe691;
+    transition-delay: 0s,0.5s,1s,1s;
+}
+/*matplotib button End*/
+
+
+
+/* textbox-matplotib Start */
+
+deckgo-highlight-code{
+    position: relative;
+    width: 800px;
+    padding: 0;
+    margin: 0 auto;
+    font-size: 15px;
+    margin-bottom: 30px;
+    text-transform: lowercase;
+}
+
+/* textbox-matplotib End */
+
+
+
+
+/* Loader */
+
+.loading {
+            overflow: hidden;
+
+ }
+
+.loader{
+    box-sizing: border-box;
+    position: fixed;
+    padding:0;
+    margin:0;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100000;
+    background: #ffe691;
+     background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.loader span{
+    width: 50px;
+    height: 300px;
+    margin: 0 20px;
+    background: #ffe691 ;
+    animation: animate 1.4s linear infinite;
+}
+
+.loader span:nth-child(1){
+    animation-delay: 0s;
+}
+.loader span:nth-child(2){
+    animation-delay: 0.2s;
+}
+.loader span:nth-child(3){
+    animation-delay: 0.4s;
+}
+.loader span:nth-child(4){
+    animation-delay: 0.6s;
+}
+.loader span:nth-child(5){
+    animation-delay: 0.8s;
+
+}.loader span:nth-child(6){
+    animation-delay: 1s;
+}
+.loader span:nth-child(7){
+    animation-delay: 1.2s;
+}
+
+@keyframes animate {
+    0%{
+        box-shadow: 0 0 0 rgb(0,0,0,.5);
+        opacity: 0;
+        transform: translateX(-50px) scale(1);
+    }
+    50%{
+        box-shadow: 0 20px 050px rgb(0,0,0,.5);
+        opacity: 1;
+        transform: translateX(0px) scale(1.2);
+
+    }
+    100%{
+        box-shadow: 0 0 0 rgb(0,0,0,.5);
+        opacity: 0;
+        transform: translateX(50px) scale(1);
+    }
+}
+
+/* Loader end */
+
+@media (max-width: 947px) {
+    .menu-btn {
+        display: block;
+        z-index: 999;
+    }
+
+    .menu-btn i.active:before {
+        content: "\f00d";
+    }
+
+
+    .navbar .menu {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #111;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+
+    .navbar .menu.active {
+        left: 0;
+
+    }
+
+    .navbar .menu li {
+        display: block;
+    }
+
+    .navbar .menu li a {
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+
+    .navbar .max-width .menu-btn{
+        padding: 0 30px;
+        right: 100%;
+    }
+}
+
+
+
+
+@media (max-width: 850px) {
+    .btn-matplotib{
+        display: none;
+    }
+
+    .scroll-down{
+        align-items: center;
+         height: 80px;
+         width: 50px;
+         border: 3.7px solid #ffe992;
+         position: absolute;
+         bottom: 50px;
+         border-radius: 50px;
+         cursor: pointer;
+    }
+
+    .scroll-down::before,
+    .scroll-down::after{
+        align-items: center;
+         content: '';
+         position: absolute;
+         top: 20%;
+         left: 50%;
+         border: 2px solid #ffe992;
+         height: 10px;
+         width: 10px;
+         transform: translate(-50%, -100%) rotate(45deg);
+         border-top: transparent;
+         border-left: transparent;
+        animation: scroll-down 1s ease-in-out infinite;
+    }
+    .scroll-down::after {
+        top: 30%;
+        animation-delay: .3s;
+    }
+
+    @keyframes scroll-down{
+      0% {
+        opacity: 0;
+        }
+     30% {
+         opacity: 1;
+     }
+    60% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        top: 90%;
+    }
+    }
+}
+
+
+@media (max-width: 320px) {
+
+    html{
+        max-width: 100%;
+    }
+
+    .article-flask .flask-container h3 span{
+        word-spacing: 0px;
+    }
+
+     .navbar .max-width .menu-btn{
+           position: relative;
+         right: 57px;
+    }
+
+    .navbar .max-width .logo{
+       position: relative;
+       right: 57px;
+
+    }
+
+}
+
+
+@media (min-width:100px) and (max-width: 1281px){
+  .article-matplotib .matplotib-container h1{
+        margin: 0 auto;
+        overflow-wrap:break-word;
+    }
+
+    .matplotib-container .row{
+        display: block;
+        margin: auto;
+        padding: 0;
+        flex-direction: column;
+    }
+
+    .matplotib-container .row .left img{
+        position: relative;
+        align-items: center;
+        padding: 0;
+        max-width: 100%;
+    }
+
+    .matplotib-container .row .right p{
+        position: relative;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+
+    .article-matplotib .matplotib-container .gif{
+        display: block;
+        align-items: center;
+        padding: 0;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .article-matplotib .matplotib-container .cover{
+        width: 100%;
+        height: 50%;
+        position: relative;
+        align-items: center;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .article-matplotib .matplotib-container p{
+        position: relative;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .matplotib-container .row{
+        display: flex;
+        margin: 0 auto;
+        padding: 0;
+        position: relative;
+        max-width: 100%;
+
+    }
+
+
+    .article-matplotib .matplotib-container img{
+        max-width: 100%;
+        align-items: center;
+        padding: 10px;
+    }
+
+
+
+    .article-matplotib .matplotib-container .logo{
+        padding: 0;
+        max-width: 100%;
+        left: 0%;
+    }
+
+
+    .article-matplotib .matplotib-container h3{
+        padding: 0;
+        margin: 0.5em 0 0.5em;
+        width: 100%;
+        left: 0%;
+        font-size: 4em;
+        white-space: pre-line;
+        font-weight: 1000;
+    }
+
+
+    deckgo-highlight-code{
+        position: relative;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+}
+
+
+
+@media (min-width:1281px) {
+    .article-matplotib .matplotib-container .gif{
+        display: none;
+    }
+
+    .article-matplotib .matplotib-container .cover{
+        position: relative;
+        align-items: center;
+        left: 25%;
+        width: 70em;
+        height: 38em;
+    }
+
+    .matplotib-container .image{
+        position: relative;
+        align-items: center;
+        display: block;
+        margin: 0 auto;
+
+    }
+
+}
+
+@media (orientation: portrait) and (max-width: 850px){
+    .matplotib .container #scene .layer.none{
+        display: none !important;
+    }
+
+}
+
+
+@media (orientation: portrait) and (max-width: 850px) {
+    .matplotib .banner-logo {
+        display: block;
+        width: 55em;
+        margin: 0 auto;
+        padding: 0;
+        animation-name: spin;
+        animation-duration: 5000ms;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    @keyframes spin {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    .matplotib .banner-logo {
+        width:35em;
+        height:auto;
+        margin: auto;
+    }
+
+}

@@ -1,0 +1,475 @@
+{% extends 'blog/Base/Base.html' %}
+{% load static %}
+
+<!-- PopUp Newsletter -->
+{% block newsletter %}
+<div id="popup">
+     <div class="content">
+        <img src="../../static/blog/newsletter/Doflamingo.png">
+            <h2>Join Our Newsletter</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing
+                elit. Esse itaque blanditiis dolore vel placeat libero.
+            </p>
+        <div class="inputBox">
+            <input type="email" placeholder="Enter Email">
+        </div>
+        <div class="inputBox">
+            <input type="submit" class="btn" value="Sign Up" onclick="popupToggle()">
+        </div>
+     </div>
+         <a class="close" onclick="popupToggle()"><img src="../../static/blog/newsletter/cancel.png"></a>
+</div>
+
+{% endblock %}
+<!-- PopUp Newsletter END -->
+
+
+<!-- HOME -->
+{% block header %}
+<section class="home" id="home">
+
+    <h3 data-speed="-2" class="home-parallax" data-aos="flip-down">Get Pythonic</h3>
+
+    <img data-speed="5" class="home-parallax" src="../../static/blog/cover/home-img.png" alt="">
+
+    <a data-speed="7" href="#librarie" class="btn home-parallax" href="#librarie/">explore</a>
+
+</section>
+{% endblock %}
+<!-- HOME END -->
+
+<!-- LIBRARIES -->
+{%  block libraries  %}
+<section class="libraries" id="librarie">
+
+    <h1 class="heading" data-aos="flip-down" data-aos-delay="100"><span>libraries</span> </h1>
+
+    <div class="swiper libraries-slider" data-aos="slide-up">
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide box">
+                <img src="../../static/blog/libraries/flask-lib.png" alt="">
+                <div class="content">
+                    <h3>Flask</h3>
+                    <div class="price">Web<span> Framework</span></div>
+                    <p>
+                        <span class="fas fa-circle"></span>Latest version: 2.0.2
+                        <span class="fas fa-circle"></span> lightweight Web-framwork
+                        <span class="fas fa-circle"></span> API
+                        <span class="fas fa-circle"></span> beginner-friendly
+                    </p>
+                    <a href="{% url 'flask' %}" class="btn">read more</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="../../static/blog/libraries/requests-lib.png" alt="">
+                <div class="content">
+                    <h3>Request</h3>
+                    <div class="price">Hypertext <span>Transfer</span> Protocol</div>
+                    <p>
+                        <span class="fas fa-circle"></span>Latest version: 3.6+
+                        <span class="fas fa-circle"></span> Http requests
+                        <span class="fas fa-circle"></span> request data
+                        <span class="fas fa-circle"></span> PATCH requests
+                    </p>
+                    <a href="{% url 'request' %}" class="btn">read more</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="../../static/blog/libraries/matplotib-lib.png" alt="">
+                <div class="content">
+                    <h3>Matplotib</h3>
+                    <div class="price">Data<span>visualization</span></div>
+                    <p>
+                        <span class="fas fa-circle"></span>Latest version: 3.5.1
+                        <span class="fas fa-circle"></span> numerical mathematics
+                        <span class="fas fa-circle"></span> plotting
+                        <span class="fas fa-circle"></span> creating static
+                    </p>
+                    <a href="{% url 'matplotib' %}" class="btn">read more</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="../../static/blog/libraries/beautifullsoup-lib.png" alt="">
+                <div class="content">
+                    <h3>Beautifullsoup</h3>
+                    <div class="price">Web<span> Scrapping</span></div>
+                    <p>
+                        <span class="fas fa-circle"></span>Latest version: 4.9.3
+                        <span class="fas fa-circle"></span> pull data
+                        <span class="fas fa-circle"></span> parsing HTML
+                        <span class="fas fa-circle"></span> scrape information
+                    </p>
+                    <a href="{% url 'beautifullsoup' %}" class="btn">read more</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="../../static/blog/libraries/numpy-lib.png" alt="">
+                <div class="content">
+                    <h3>Numpy</h3>
+                    <div class="price">Science <span>and</span> Engineering</div>
+                    <p>
+                        <span class="fas fa-circle"></span>Latest version: 1.22.0
+                        <span class="fas fa-circle"></span> numerical data
+                        <span class="fas fa-circle"></span> data science
+                        <span class="fas fa-circle"></span> scientific computing
+                    </p>
+                    <a href="{% url 'numpy' %}" class="btn">read more</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="../../static/blog/libraries/django-lib.png" alt="">
+                <div class="content">
+                    <h3>Django</h3>
+                    <div class="price">Web<span> Framework</span></div>
+                    <p>
+                        <span class="fas fa-circle"></span>Latest version: 4.0.1
+                        <span class="fas fa-circle"></span> Web designe
+                        <span class="fas fa-circle"></span> open source framework
+                        <span class="fas fa-circle"></span> maintaining quality web app
+                    </p>
+                    <a href="{% url 'django' %}" class="btn">read more</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="../../static/blog/libraries/panda-lib.png" alt="">
+                <div class="content">
+                    <h3>Panda</h3>
+                    <div class="price">Data<span> Analysis</span></div>
+                    <p>
+                        <span class="fas fa-circle"></span>Latest version:1.3.5
+                        <span class="fas fa-circle"></span> machine learning
+                        <span class="fas fa-circle"></span> data science
+                        <span class="fas fa-circle"></span> data analysis
+                    </p>
+                    <a href="{% url 'panda' %}" class="btn">read more</a>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+{% endblock %}
+<!-- LIBRARIES END -->
+
+{% block about %}
+ <!-- about section start -->
+    <section class="about" id="about">
+        <div class="max-width">
+            <h2 class="title" data-aos="flip-up">About Us</h2>
+            <div class="about-content">
+                <div class="column left">
+                    <img src="../../static/blog/cover/about-img.png" alt="" data-aos="slide-right">
+                    <a class="btn about-btn" onclick="popupToggle()">Get More</a>
+                </div>
+                <div class="column right">
+                    <div class="text" data-aos="slide-left">Python Libraries<span class="about-2"></span></div>
+                    <p data-aos="slide-left">
+                        Doflamingo It is the gateway for beginners in Python, here you will find libraries with
+                        a simplified explanation with a focus on the basics.
+Also our mission is to simplify the libraries as much as possible even if you do not know anything
+                        about Python, in short, here you find the best way to learn and practice programming
+                        and expand your knowledge in the Python language</p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+<!-- SERVICE -->
+{% block service %}
+<section class="services" id="services">
+    <h1 class="heading" data-aos="flip-down" data-aos-delay="100"><span>Privilegs</span> </h1>
+    <div class="box-container">
+        <div class="box"  data-aos="fade-up">
+            <i class='fas fa-brain fa-spin fa-3x'></i>
+            <h3>Explaining</h3>
+            <p>A simplified explanation of Python libraries with the way the library works, and how to use it</p>
+            <a href="#" class="btn"> read more</a>
+        </div>
+
+        <div class="box"  data-aos="fade-up">
+            <i class="fa fa-book fa-spin fa-3x" aria-hidden="true"></i>
+            <h3>Source</h3>
+            <p>We provide library sources with some videos that help you visually understand and absorb more and more</p>
+            <a href="#" class="btn"> read more</a>
+        </div>
+
+        <div class="box"  data-aos="fade-up">
+            <i class='fas fa-hammer fa-spin fa-3x'></i>
+            <h3>Projects</h3>
+            <p>We give you a way to build projects, whether you are a beginner or not, and help build your own projects</p>
+            <a href="#" class="btn"> read more</a>
+        </div>
+
+        <div class="box"  data-aos="fade-up">
+            <i class='fas fa-hands-helping fa-spin fa-3x'></i>
+            <h3>consultation</h3>
+            <p>With you 24/7 to help you solve obstacles in the code, and advise you on everything related to programming</p>
+            <a href="#" class="btn"> read more</a>
+        </div>
+    </div>
+</section>
+{% endblock %}
+<!-- SERVICE END -->
+
+<!-- featured END -->
+{% block featured %}
+<section class="featured" id="featured">
+
+    <h1 class="heading"> <span>Categories</span></h1>
+
+    <div class="swiper featured-slider">
+
+       <div class="swiper-wrapper">
+
+            <div class="swiper-slide box">
+                <img src="../../static/blog/cover/pngegg.png" alt="">
+                <div class="content">
+                    <h3>Data Science</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="price">2 Libaries</div>
+                    <a href="#" class="btn">check out</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="image/car-2.png" alt="">
+                <div class="content">
+                    <h3>Web Framework</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="price">2 Libraries</div>
+                    <a href="#" class="btn">check out</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="image/car-3.png" alt="">
+                <div class="content">
+                    <h3>Web Scrapping</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="price">One Library</div>
+                    <a href="#" class="btn">check out</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="image/car-4.png" alt="">
+                <div class="content">
+                    <h3>Statics</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="price">One Library</div>
+                    <a href="#" class="btn">check out</a>
+                </div>
+            </div>
+
+       </div>
+
+       <div class="swiper-pagination"></div>
+
+    </div>
+
+</section>
+{% endblock %}
+<!-- featured END -->
+
+<!-- QUOTES -->
+{% block quotes %}
+<section class="reviews" id="reviews">
+
+    <h1 class="heading" data-aos="flip-down" data-aos-delay="90"><span>Pythonic opinions</span> </h1>
+
+     <div class="reviews-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="testimonialBox">
+            <img src="../../../static/blog/review-profiles/thinking.png" class="quote">
+            <div class="content">
+                 <p>From the 10-15 languages that I know, Python is definitely one of my favorites (the others that share that dubious honor are Racket, C# and maybe JavaScript).</p>
+              <div class="details">
+                <div class="imgBx">
+                  <img src="../../../static/blog/review-profiles/person-6.jfif">
+                </div>
+                <h3>Vince Gedalyahu<br><span>Data science</span></h3>
+              </div>
+            </div>
+        </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="testimonialBox">
+            <img src="../../../static/blog/review-profiles/thinking.png" class="quote">
+            <div class="content">
+             <p>I love Python. It's not a language I build apps to distribute in (although you could) but if I want to put something together quickly it seems there's always a great ...</p>
+              <div class="details">
+                <div class="imgBx">
+                  <img src="../../../static/blog/review-profiles/person-1.jfif">
+                </div>
+                <h3>Someone Famous<br><span>Data analysis</span></h3>
+              </div>
+            </div>
+        </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="testimonialBox">
+            <img src="../../../static/blog/review-profiles/thinking.png" class="quote">
+            <div class="content">
+                 <p>Python is easy to use, powerful, and versatile, making it a great choice for beginners and experts alike. Python's readability makes it a great first programming ...</p>
+              <div class="details">
+                <div class="imgBx">
+                  <img src="../../../static/blog/review-profiles/person-2.jfif">
+                </div>
+                <h3>Serge Joffrey<br><span>Data analysis</span></h3>
+              </div>
+            </div>
+        </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="testimonialBox">
+            <img src="../../../static/blog/review-profiles/thinking.png" class="quote">
+            <div class="content">
+                                  <p>Python is eating the world: How one developer's side project became the hottest programming language on the planet</p>
+
+              <div class="details">
+                <div class="imgBx">
+                  <img src="../../../static/blog/review-profiles/person-3.jfif">
+                </div>
+                <h3>Martijn Kody<br><span>Softwar enginner</span></h3>
+              </div>
+            </div>
+        </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="testimonialBox">
+            <img src="../../../static/blog/review-profiles/thinking.png" class="quote">
+            <div class="content">
+                    <p>Since it's relatively easy to learn, Python has been adopted by many non-programmers such as accountants and scientists, for a variety of everyday tasks, like ...</p>
+
+              <div class="details">
+                <div class="imgBx">
+                  <img src="../../../static/blog/review-profiles/person-4.jfif">
+                </div>
+                <h3>Martijn Kody<br><span>Data science</span></h3>
+              </div>
+            </div>
+        </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="testimonialBox">
+            <img src="../../../static/blog/review-profiles/thinking.png" class="quote">
+            <div class="content">
+                    <p>Python is eating the world: How one developer's side project became the hottest programming language on the planet</p>
+
+              <div class="details">
+                <div class="imgBx">
+                  <img src="../../../static/blog/review-profiles/person-3.jfif">
+                </div>
+                <h3>Charley Ozihel<br><span>Data science</span></h3>
+              </div>
+            </div>
+        </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="testimonialBox">
+            <img src="../../../static/blog/review-profiles/thinking.png" class="quote">
+            <div class="content">
+                    <p>Python is as efficient and comfortable as reptile Python. It is great programming language, many people in IT sector has already learned this language because ...</p>
+              <div class="details">
+                <div class="imgBx">
+                  <img src="../../../static/blog/review-profiles/person-5.jfif">
+                </div>
+                <h3>Martijn Kody<br><span>Softwar enginner</span></h3>
+              </div>
+            </div>
+        </div>
+        </div>
+      </div>
+    </div>
+
+        <div class="swiper-pagination"></div>
+
+    </div>
+
+</section>
+{% endblock %}
+<!-- QUOTES END -->
+
+<!-- CONTACT -->
+{% block contact %}
+<section class="contact" id="contact">
+
+    <h1 class="heading" data-aos="flip-up" data-aos-delay="100"><span>contact us</span></h1>
+
+    <div class="row">
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13247.471933831821!2d-5.5741601684762925!3d33.89305369039071!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda05ad5eca8cb79%3A0x5cb3610178a72660!2sEl%20hedime%20Square!5e0!3m2!1sfr!2sma!4v1641547945570!5m2!1sfr!2sma" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" data-aos="fade-right"></iframe>
+
+        <form action="">
+            <h3  data-aos="fade-left">if you face a probleme</h3>
+            <input type="text" placeholder="name" class="box"  data-aos="fade-left">
+            <input type="email" placeholder="email" class="box"  data-aos="fade-left">
+            <input type="tel" placeholder="subject" class="box"  data-aos="fade-left">
+            <textarea placeholder="Explain your problem " class="box" cols="30" rows="10"  data-aos="fade-left"></textarea>
+            <input type="submit" value="send message" class="btn"  data-aos="fade-left">
+        </form>
+
+    </div>
+
+</section>
+{% endblock %}
+<!-- CONTACT END -->
+
+
+<!-- FOOTER -->
+{% block footer %}
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#">home</a>
+            <a href="#about">about</a>
+            <a href="#services">service</a>
+            <a href="#contact">contact</a>
+
+        </div>
+
+        <div class="box">
+            <h3>contact info</h3>
+            <a href="#"> <i class="fas fa-phone"></i> +212-6458-72067 </a>
+            <a href="#"> <i class="fas fa-envelope"></i> ilcielozenstalle7@gmail.com </a>
+            <a href="#"> <i class="fas fa-map"></i> meknes, morocco - 50000 </a>
+        </div>
+
+        <div class="box">
+            <h3>follow us</h3>
+            <a href="https://www.facebook.com"> <i class="fab fa-facebook-f"></i> facebook </a>
+            <a href="https://www.twitter.com"> <i class="fab fa-twitter"></i> twitter </a>
+            <a href="https://www.instagram.com"> <i class="fab fa-instagram"></i> instagram </a>
+            <a href="https://www.github.com"> <i class="fab fa-github"></i> github </a>
+        </div>
+
+    </div>
+
+    <div class="credit">created by <span>Me</span> | Copyrighted</div>
+
+</section>
+{% endblock %}
+<!-- FOOTER END -->
