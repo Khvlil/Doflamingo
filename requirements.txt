@@ -1,0 +1,5 @@
+asgiref
+certifi
+Django
+gunicorn
+whitenoise
