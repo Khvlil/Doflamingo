@@ -1,6 +1,5 @@
 asgiref
 certifi
 Django
-django_heroku
 gunicorn
 whitenoise
